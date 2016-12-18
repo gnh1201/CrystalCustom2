@@ -31,6 +31,20 @@ namespace CrystalCustoms2.controller
             "settle_mblno",
             "settle_hblno",
             "settle_own",
+            "settle_loadport",
+            "settle_arriveport",
+            "settle_volume",
+            "settle_volume_unit",
+            "settle_size",
+            "settle_size_unit",
+            "settle_arrivedate",
+            "settle_duty",
+            "settle_vat",
+            "settle_vatrate",
+            "settle_commision",
+            "settle_type",
+            "settle_shipno",
+            "settle_costsum",
             "settle_datetime"
         };
 
@@ -104,6 +118,20 @@ namespace CrystalCustoms2.controller
                                 st.SettleMblno = reader["settle_mblno"].ToString();
                                 st.SettleHblno = reader["settle_hblno"].ToString();
                                 st.SettleOwn = reader["settle_own"].ToString();
+                                st.SettleLoadport = reader["settle_loadport"].ToString();
+                                st.SettleArriveport = reader["settle_arriveport"].ToString();
+                                st.SettleVolume = Int32.Parse(reader["settle_volume"].ToString());
+                                st.SettleVolumeUnit = reader["settle_volume_unit"].ToString();
+                                st.SettleSize = Int32.Parse(reader["settle_size"].ToString());
+                                st.SettleSizeUnit = reader["settle_size_unit"].ToString();
+                                st.SettleArriveDate = DateTime.Parse(reader["settle_arrivedate"].ToString());
+                                st.SettleDuty = Int32.Parse(reader["settle_duty"].ToString());
+                                st.SettleVat = Int32.Parse(reader["settle_vat"].ToString());
+                                st.SettleVatrate = double.Parse(reader["settle_vatrate"].ToString());
+                                st.SettleCommision = Int32.Parse(reader["settle_commision"].ToString());
+                                st.SettleType = reader["settle_type"].ToString();
+                                st.SettleShipno = reader["settle_shipno"].ToString();
+                                st.SettleCostsum = Int32.Parse(reader["settle_costsum"].ToString());
                                 st.SettleDatetime = DateTime.Parse(reader["settle_datetime"].ToString());
                                 QueryItems.Add(st);
                             }
@@ -160,8 +188,22 @@ namespace CrystalCustoms2.controller
                     cmd.Parameters.AddWithValue("@settle_mblno", st.SettleMblno);
                     cmd.Parameters.AddWithValue("@settle_hblno", st.SettleHblno);
                     cmd.Parameters.AddWithValue("@settle_own", st.SettleOwn);
+                    cmd.Parameters.AddWithValue("@settle_loadport", st.SettleLoadport);
+                    cmd.Parameters.AddWithValue("@settle_arriveport", st.SettleArriveport);
+                    cmd.Parameters.AddWithValue("@settle_volume", st.SettleVolume);
+                    cmd.Parameters.AddWithValue("@settle_volume_unit", st.SettleVolumeUnit);
+                    cmd.Parameters.AddWithValue("@settle_size", st.SettleSize);
+                    cmd.Parameters.AddWithValue("@settle_size_unit", st.SettleSizeUnit);
+                    cmd.Parameters.AddWithValue("@settle_arrivedate", st.SettleArriveDate);
+                    cmd.Parameters.AddWithValue("@settle_duty", st.SettleDuty);
+                    cmd.Parameters.AddWithValue("@settle_vat", st.SettleVat);
+                    cmd.Parameters.AddWithValue("@settle_vatrate", st.SettleVatrate);
+                    cmd.Parameters.AddWithValue("@settle_commision", st.SettleCommision);
+                    cmd.Parameters.AddWithValue("@settle_type", st.SettleType);
+                    cmd.Parameters.AddWithValue("@settle_shipno", st.SettleShipno);
+                    cmd.Parameters.AddWithValue("@settle_costsum", st.SettleCostsum);
                     cmd.Parameters.AddWithValue("@settle_datetime", st.SettleDatetime);
-
+                    
                     try
                     {
                         result = cmd.ExecuteNonQuery();
@@ -223,6 +265,20 @@ namespace CrystalCustoms2.controller
                     cmd.Parameters.AddWithValue("@settle_mblno", st.SettleMblno);
                     cmd.Parameters.AddWithValue("@settle_hblno", st.SettleHblno);
                     cmd.Parameters.AddWithValue("@settle_own", st.SettleOwn);
+                    cmd.Parameters.AddWithValue("@settle_loadport", st.SettleLoadport);
+                    cmd.Parameters.AddWithValue("@settle_arriveport", st.SettleArriveport);
+                    cmd.Parameters.AddWithValue("@settle_volume", st.SettleVolume);
+                    cmd.Parameters.AddWithValue("@settle_volume_unit", st.SettleVolumeUnit);
+                    cmd.Parameters.AddWithValue("@settle_size", st.SettleSize);
+                    cmd.Parameters.AddWithValue("@settle_size_unit", st.SettleSizeUnit);
+                    cmd.Parameters.AddWithValue("@settle_arrivedate", st.SettleArriveDate);
+                    cmd.Parameters.AddWithValue("@settle_duty", st.SettleDuty);
+                    cmd.Parameters.AddWithValue("@settle_vat", st.SettleVat);
+                    cmd.Parameters.AddWithValue("@settle_vatrate", st.SettleVatrate);
+                    cmd.Parameters.AddWithValue("@settle_commision", st.SettleCommision);
+                    cmd.Parameters.AddWithValue("@settle_type", st.SettleType);
+                    cmd.Parameters.AddWithValue("@settle_shipno", st.SettleShipno);
+                    cmd.Parameters.AddWithValue("@settle_costsum", st.SettleCostsum);
                     cmd.Parameters.AddWithValue("@settle_datetime", st.SettleDatetime);
 
                     try

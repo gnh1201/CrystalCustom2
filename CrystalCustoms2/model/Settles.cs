@@ -50,7 +50,7 @@ namespace CrystalCustoms2.model
 
         public string SettleVolumeUnit { get; set; }
 
-        public int SettleSIze { get; set; }
+        public int SettleSize { get; set; }
 
         public string SettleSizeUnit { get; set; }
 
@@ -92,6 +92,20 @@ namespace CrystalCustoms2.model
             this.SettleMblno = param.SettleMblno;
             this.SettleHblno = param.SettleHblno;
             this.SettleOwn = param.SettleOwn;
+            this.SettleLoadport = param.SettleLoadport;
+            this.SettleArriveport = param.SettleArriveport;
+            this.SettleVolume = param.SettleVolume;
+            this.SettleVolumeUnit = param.SettleVolumeUnit;
+            this.SettleSize = param.SettleSize;
+            this.SettleSizeUnit = param.SettleSizeUnit;
+            this.SettleArriveDate = param.SettleArriveDate;
+            this.SettleDuty = param.SettleDuty;
+            this.SettleVat = param.SettleVat;
+            this.SettleVatrate = param.SettleVatrate;
+            this.SettleCommision = param.SettleCommision;
+            this.SettleType = param.SettleType;
+            this.SettleShipno = param.SettleShipno;
+            this.SettleCostsum = param.SettleCostsum;
             this.SettleDatetime = param.SettleDatetime;
         }
     }
