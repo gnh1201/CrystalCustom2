@@ -135,6 +135,9 @@
     <Compile Include="view\ManageSettlement.xaml.cs">
       <DependentUpon>ManageSettlement.xaml</DependentUpon>
     </Compile>
+    <Compile Include="view\ManageStocks.xaml.cs">
+      <DependentUpon>ManageStocks.xaml</DependentUpon>
+    </Compile>
     <Compile Include="view\PermitControl.xaml.cs">
       <DependentUpon>PermitControl.xaml</DependentUpon>
     </Compile>
@@ -185,6 +188,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="view\ManageSettlement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\ManageStocks.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

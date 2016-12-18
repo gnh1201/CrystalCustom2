@@ -18,6 +18,7 @@ namespace CrystalCustoms2
         private PermitControl PermitControlInstance = null;
         private ManageApikeys ManageApikeysInstance = null;
         private AppSetting AppSettingInstance = null;
+        private SettleControl SettleControlInstance = null;
         private ManageAddressBook AddressBookInstance = null;
 
         public MainWindow()
@@ -61,6 +62,20 @@ namespace CrystalCustoms2
                 ContentId = "AppSetting",
                 Title = "어플리케이션 설정",
                 Content = AppSettingInstance,
+                IconSource = new BitmapImage(new Uri("images/document.png", UriKind.Relative))
+            };
+            documentPane.Children.Add(ld);
+            documentPane.Children.Last().IsActive = true;
+        }
+
+        private void SettleClicked(object sender, RoutedEventArgs e)
+        {
+            SettleControlInstance = new SettleControl();
+            LayoutDocument ld = new LayoutDocument
+            {
+                ContentId = "SettleControl",
+                Title = "운송정보 등록",
+                Content = SettleControlInstance,
                 IconSource = new BitmapImage(new Uri("images/document.png", UriKind.Relative))
             };
             documentPane.Children.Add(ld);

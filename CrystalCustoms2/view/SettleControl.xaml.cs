@@ -23,9 +23,26 @@ namespace CrystalCustoms2.view
     /// </summary>
     public partial class SettleControl : UserControl
     {
+        private Dictionary<string, string> settleDict = new Dictionary<string, string>();
+
+        public SettleControl()
+        {
+            InitializeComponent();
+        }
+
         public SettleControl(LayoutDocumentPane documentPaneInstance, cargCsclPrgsInfoQryRtnVo responseResultInstance = null)
         {
             InitializeComponent();
+        }
+
+        private void ClickedBtnOk(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void InitializeDIctionary()
+        {
+
         }
     }
 }

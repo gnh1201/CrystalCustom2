@@ -5,8 +5,95 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CrystalCustoms2.view"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="500" d:DesignWidth="500">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height = "40" />
+            <RowDefinition Height = "*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width = "*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Content="운송정보 입력" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="0"/>
+
+        <Grid x:Name="settleForm" Grid.Column="0" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height = "40" />
+                <RowDefinition Height = "40" />
+                <RowDefinition Height = "40" />
+                <RowDefinition Height = "40" />
+                <RowDefinition Height = "40" />
+                <RowDefinition Height = "40" />
+                <RowDefinition Height = "40" />
+                <RowDefinition Height = "40" />
+                <RowDefinition Height = "40" />
+                <RowDefinition Height = "40" />
+                <RowDefinition Height = "40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width = "*" />
+                <ColumnDefinition Width = "*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
+                <Label Content="화주명" VerticalAlignment="Center" Width="120"/>
+                <TextBox Name="txtSettleName" Text="" VerticalAlignment="Center" Width="200"/>
+            </StackPanel>
+            <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal">
+                <Label Content="운송편명" VerticalAlignment="Center" Width="120"/>
+                <TextBox  Text="" VerticalAlignment="Center" Width="200"/>
+            </StackPanel>
+            <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Horizontal">
+                <Label Content="Loading Port" VerticalAlignment="Center" Width="120"/>
+                <TextBox  Text="" VerticalAlignment="Center" Width="200"/>
+            </StackPanel>
+            <StackPanel Grid.Column="0" Grid.Row="3" Orientation="Horizontal">
+                <Label Content="Size" VerticalAlignment="Center" Width="120"/>
+                <TextBox  Text="" VerticalAlignment="Center" Width="200"/>
+            </StackPanel>
+            <StackPanel Grid.Column="0" Grid.Row="4" Orientation="Horizontal">
+                <Label Content="도착일" VerticalAlignment="Center" Width="120"/>
+                <TextBox  Text="" VerticalAlignment="Center" Width="200"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
+                <Label Content="담당자" VerticalAlignment="Center" Width="120"/>
+                <TextBox Text="" VerticalAlignment="Center" Width="200"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+                <Label Content="B/L No" VerticalAlignment="Center" Width="120"/>
+                <TextBox Text="" VerticalAlignment="Center" Width="200"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
+                <Label Content="Arrived Port" VerticalAlignment="Center" Width="120"/>
+                <TextBox Text="" VerticalAlignment="Center" Width="200"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
+                <Label Content="도착지" VerticalAlignment="Center" Width="120"/>
+                <TextBox Text="" VerticalAlignment="Center" Width="200"/>
+            </StackPanel>
+
+            <Label Content="측량정보" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="4" VerticalAlignment="Center"/>
+            <StackPanel Grid.Column="0" Grid.Row="6" Orientation="Horizontal">
+                <Label Content="Weight" VerticalAlignment="Center" Width="120"/>
+                <TextBox Text="" VerticalAlignment="Center" Width="200"/>
+            </StackPanel>
+            <StackPanel Grid.Column="0" Grid.Row="7" Orientation="Horizontal">
+                <Label Content="Weight Unit" VerticalAlignment="Center" Width="120"/>
+                <TextBox  Text="" VerticalAlignment="Center" Width="200"/>
+            </StackPanel>
+            <StackPanel Grid.Column="2" Grid.Row="6" Orientation="Horizontal">
+                <Label Content="Volume" VerticalAlignment="Center" Width="120"/>
+                <TextBox Text="" VerticalAlignment="Center" Width="200"/>
+            </StackPanel>
+            <StackPanel Grid.Column="2" Grid.Row="7" Orientation="Horizontal">
+                <Label Content="Volume Unit" VerticalAlignment="Center" Width="120"/>
+                <TextBox  Text="" VerticalAlignment="Center" Width="200"/>
+            </StackPanel>
+
+            <Label Content="관세 및 수수료" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="4" VerticalAlignment="Center"/>
+        </Grid>
     </Grid>
 </UserControl>

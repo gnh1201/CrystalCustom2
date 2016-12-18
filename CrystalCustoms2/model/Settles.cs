@@ -60,7 +60,7 @@ namespace CrystalCustoms2.model
 
         public int SettleVat { get; set; }
 
-        public int SettleVatrate { get; set; }
+        public double SettleVatrate { get; set; }
 
         public int SettleCommision { get; set; }
 

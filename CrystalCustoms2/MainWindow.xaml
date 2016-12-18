@@ -31,16 +31,16 @@
                     <Fluent:Button Header="면장입력"
                                Icon="Images\something.png"
                                LargeIcon="Images\something.png" Click="PermitClicked"/>
-                    <Fluent:Button Header="통관입력"
+                    <Fluent:Button Header="운송입력"
                                Icon="Images\something.png"
-                               LargeIcon="Images\something.png" />
+                               LargeIcon="Images\something.png" Click="SettleClicked" />
                 </Fluent:RibbonGroupBox>
 
                 <Fluent:RibbonGroupBox Header="관리">
                     <Fluent:Button Header="면장관리"
                                Icon="Images\something.png"
                                LargeIcon="Images\something.png"/>
-                    <Fluent:Button Header="통관관리"
+                    <Fluent:Button Header="운송관리"
                                Icon="Images\something.png"
                                LargeIcon="Images\something.png" />
                 </Fluent:RibbonGroupBox>
