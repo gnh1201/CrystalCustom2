@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="CrystalCustoms2.view.PermitViewer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CrystalCustoms2.view"
+             mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height = "30" />
+            <RowDefinition Height = "50" />
+            <RowDefinition Height = "40" />
+            <RowDefinition Height = "3*" />
+            <RowDefinition Height = "50" />
+            <RowDefinition Height = "2*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width = "*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Content="수입면장 작업선택" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="0"/>
+
+        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal">
+            <Button x:Name="btnSettle" Content="통관/운송정보 등록" Width="150" Height="30" Click="ClickedBtnSettle"/>
+            <Button x:Name="btnStock" Content="재고정보 등록" Width="150" Height="30" Click="ClickedBtnStock"/>
+        </StackPanel>
+
+        <Label Content="수입면장 기본정보" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="2" />
+        <ScrollViewer Grid.Row="3" CanContentScroll="True" VerticalScrollBarVisibility="Auto">
+            <Grid x:Name="permitSummaries">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width = "*" />
+                    <ColumnDefinition Width = "2*" />
+                    <ColumnDefinition Width = "1*" />
+                    <ColumnDefinition Width = "2*" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </ScrollViewer>
+
+        <Label Content="면장 상세정보" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="4" VerticalAlignment="Bottom"/>
+        <DataGrid x:Name="permitSubDataGrid" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Top" IsReadOnly="True" SelectionMode="Single">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="장치장명" Binding="{Binding Path=shedNm}"/>
+                <DataGridTextColumn Header="처리일시" Binding="{Binding Path=prcsDttm}"/>
+                <DataGridTextColumn Header="신고번호" Binding="{Binding Path=dclrNo}"/>
+                <DataGridTextColumn Header="반출입일시" Binding="{Binding Path=rlbrDttm}"/>
+                <DataGridTextColumn Header="중량" Binding="{Binding Path=wght}"/>
+                <DataGridTextColumn Header="반출입근거번호" Binding="{Binding Path=rlbrBssNo}"/>
+                <DataGridTextColumn Header="사전안내내용" Binding="{Binding Path=bfhnGdncCn}"/>
+                <DataGridTextColumn Header="중량단위" Binding="{Binding Path=wghtUt}"/>
+                <DataGridTextColumn Header="포장개수" Binding="{Binding Path=pckGcnt}"/>
+                <DataGridTextColumn Header="처리구분" Binding="{Binding Path=cargTrcnRelaBsopTpcd}"/>
+                <DataGridTextColumn Header="포장단위" Binding="{Binding Path=pckUt}"/>
+                <DataGridTextColumn Header="반출입내용" Binding="{Binding Path=rlbrCn}"/>
+                <DataGridTextColumn Header="장치장부호" Binding="{Binding Path=shedSgn}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

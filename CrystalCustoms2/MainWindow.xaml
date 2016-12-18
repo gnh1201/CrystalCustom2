@@ -1,0 +1,190 @@
+﻿<Fluent:RibbonWindow x:Class="CrystalCustoms2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CrystalCustoms2"
+        xmlns:s="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        xmlns:Fluent="urn:fluent-ribbon"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:xcad="http://schemas.xceed.com/wpf/xaml/avalondock"
+        
+        Title="CrystalCustoms Prototype" Height="700" Width="1050">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Fluent:Ribbon>
+            <!--Backstage-->
+            <Fluent:Ribbon.Menu>
+                <Fluent:Backstage>
+                </Fluent:Backstage>
+            </Fluent:Ribbon.Menu>
+
+            <!--Tabs-->
+            <Fluent:RibbonTabItem Header="수입" Grid.Row="0">
+                <Fluent:RibbonGroupBox Header="입력">
+                    <Fluent:Button Header="면장입력"
+                               Icon="Images\something.png"
+                               LargeIcon="Images\something.png" Click="PermitClicked"/>
+                    <Fluent:Button Header="통관입력"
+                               Icon="Images\something.png"
+                               LargeIcon="Images\something.png" />
+                </Fluent:RibbonGroupBox>
+
+                <Fluent:RibbonGroupBox Header="관리">
+                    <Fluent:Button Header="면장관리"
+                               Icon="Images\something.png"
+                               LargeIcon="Images\something.png"/>
+                    <Fluent:Button Header="통관관리"
+                               Icon="Images\something.png"
+                               LargeIcon="Images\something.png" />
+                </Fluent:RibbonGroupBox>
+
+                <Fluent:RibbonGroupBox Header="영업">
+                    <Fluent:Button Header="견적생성"
+                               Icon="Images\something.png"
+                               LargeIcon="Images\something.png"/>
+                    <Fluent:Button Header="판매관리"
+                               Icon="Images\something.png"
+                               LargeIcon="Images\something.png" />
+                </Fluent:RibbonGroupBox>
+                <Fluent:RibbonGroupBox Header="재고">
+                    <Fluent:Button Header="재고관리"
+                               Icon="Images\something.png"
+                               LargeIcon="Images\something.png"/>
+                </Fluent:RibbonGroupBox>
+                <Fluent:RibbonGroupBox Header="고객">
+                    <Fluent:Button Header="거래처관리"
+                               Icon="Images\something.png"
+                               LargeIcon="Images\something.png"
+                               Click="AddressBookClicked"/>
+                </Fluent:RibbonGroupBox>
+            </Fluent:RibbonTabItem>
+            <Fluent:RibbonTabItem Header="수출 ">
+                <Fluent:RibbonGroupBox Header="수출">
+                    <Fluent:Button Header="면장입력"
+                               Icon="Images\something.png"
+                               LargeIcon="Images\something.png" />
+                    <Fluent:Button Header="수출신고"
+                               Icon="Images\something.png"
+                               LargeIcon="Images\something.png" />
+                    <Fluent:Button Header="수출관리" 
+                               Icon="Images\something.png"
+                               LargeIcon="Images\something.png" />
+                    <Fluent:Button Header="품목관리" 
+                               Icon="Images\something.png"
+                               LargeIcon="Images\something.png" />
+                </Fluent:RibbonGroupBox>
+            </Fluent:RibbonTabItem>
+            <Fluent:RibbonTabItem Header="설정 ">
+                <Fluent:RibbonGroupBox Header="설정">
+                    <Fluent:Button Header="인증키관리"
+                               Icon="Images\something.png"
+                               LargeIcon="Images\something.png"
+                               Click="ManageApikeysClicked"/>
+                    <Fluent:Button Header="환경설정" 
+                               Icon="Images\something.png"
+                               LargeIcon="Images\something.png"
+                               Click="AppSettingClicked"/>
+                </Fluent:RibbonGroupBox>
+            </Fluent:RibbonTabItem>
+        </Fluent:Ribbon>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" Grid.Row="1">
+            <TextBlock Text="Theme:" Margin="0,0,10,0" VerticalAlignment="Center"/>
+            <ComboBox x:Name="_themeCombo" SelectedIndex="0" Width="200">
+                <ComboBoxItem Content="Generic" />
+                <ComboBoxItem Content="Aero">
+                    <ComboBoxItem.Tag>
+                        <xcad:AeroTheme />
+                    </ComboBoxItem.Tag>
+                </ComboBoxItem>
+                <ComboBoxItem Content="VS2010">
+                    <ComboBoxItem.Tag>
+                        <xcad:VS2010Theme />
+                    </ComboBoxItem.Tag>
+                </ComboBoxItem>
+                <ComboBoxItem Content="Metro">
+                    <ComboBoxItem.Tag>
+                        <xcad:MetroTheme />
+                    </ComboBoxItem.Tag>
+                </ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+
+        <xcad:DockingManager Grid.Row="2"
+                           AllowMixedOrientation="True"
+                           BorderBrush="Black"
+                           BorderThickness="1"
+                           Theme="{Binding ElementName=_themeCombo, Path=SelectedItem.Tag}">
+            <xcad:DockingManager.DocumentHeaderTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{Binding IconSource}" Margin="0,0,4,0"/>
+                        <TextBlock Text="{Binding Title}" />
+                    </StackPanel>
+                </DataTemplate>
+            </xcad:DockingManager.DocumentHeaderTemplate>
+            <xcad:LayoutRoot x:Name="_layoutRoot">
+                <xcad:LayoutPanel Orientation="Horizontal">
+                    <xcad:LayoutAnchorablePane DockWidth="200">
+                        <xcad:LayoutAnchorable ContentId="properties" Title="Properties" CanHide="False" CanClose="False"
+                                            AutoHideWidth="240"
+                                         IconSource="images/property-blue.png">
+                            <xctk:PropertyGrid NameColumnWidth="110"
+                        SelectedObject="{Binding ElementName=_layoutRoot, Path=LastFocusedDocument.Content}"/>
+                        </xcad:LayoutAnchorable>
+                    </xcad:LayoutAnchorablePane>
+                    <xcad:LayoutDocumentPaneGroup>
+                        <xcad:LayoutDocumentPane x:Name="documentPane">
+                            <xcad:LayoutDocument ContentId="docWelcome" Title="환영합니다" IconSource="images/document.png" >
+                                <Label Content="환영합니다." FontSize="15" FontWeight="Bold"/>
+                            </xcad:LayoutDocument>
+                        </xcad:LayoutDocumentPane>
+                    </xcad:LayoutDocumentPaneGroup >
+                    <xcad:LayoutAnchorablePaneGroup DockWidth="125">
+                        <xcad:LayoutAnchorablePane>
+                            <xcad:LayoutAnchorable ContentId="alarms" Title="Alarms" IconSource="images/alarm-clock-blue.png">
+                                <ListBox>
+                                    <s:String>Alarm 1</s:String>
+                                    <s:String>Alarm 2</s:String>
+                                    <s:String>Alarm 3</s:String>
+                                </ListBox>
+                            </xcad:LayoutAnchorable>
+                            <xcad:LayoutAnchorable ContentId="journal" Title="Journal" >
+                                <RichTextBox>
+                                    <FlowDocument>
+                                        <Paragraph FontSize="14" FontFamily="Segoe">
+                                            This is the content of the Journal Pane.
+                                            <LineBreak/>
+                                            A
+                                            <Bold>RichTextBox</Bold> has been added here
+                                        </Paragraph>
+                                    </FlowDocument>
+                                </RichTextBox>
+                            </xcad:LayoutAnchorable>
+                        </xcad:LayoutAnchorablePane>
+                    </xcad:LayoutAnchorablePaneGroup>
+                </xcad:LayoutPanel>
+
+                <xcad:LayoutRoot.LeftSide>
+                    <xcad:LayoutAnchorSide>
+                        <xcad:LayoutAnchorGroup>
+                            <xcad:LayoutAnchorable Title="Agenda" ContentId="agenda" IconSource="images/alarm-clock-blue.png">
+                                <TextBlock Text="Agenda Content" Margin="10" FontSize="18" FontWeight="Black" TextWrapping="Wrap"/>
+                            </xcad:LayoutAnchorable>
+                            <xcad:LayoutAnchorable Title="Contacts" ContentId="contacts" IconSource="images/address-book--pencil.png" >
+                                <TextBlock Text="Contacts Content" Margin="10" FontSize="18" FontWeight="Black" TextWrapping="Wrap"/>
+                            </xcad:LayoutAnchorable>
+                        </xcad:LayoutAnchorGroup>
+                    </xcad:LayoutAnchorSide>
+                </xcad:LayoutRoot.LeftSide>
+            </xcad:LayoutRoot>
+        </xcad:DockingManager>
+    </Grid>
+</Fluent:RibbonWindow>

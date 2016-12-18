@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="CrystalCustoms2.view.PermitControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CrystalCustoms2.view"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height = "40" />
+            <RowDefinition Height = "30" />
+            <RowDefinition Height = "30" />
+            <RowDefinition Height = "30" />
+            <RowDefinition Height = "30" />
+            <RowDefinition Height = "60" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width = "*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Content="수입면장 입력" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="0" />
+
+        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal">
+            <Label Content="면장유형" VerticalAlignment="Center" Width="70"/>
+            <ComboBox x:Name="selBlNo" VerticalAlignment="Center" Width="200">
+                <ComboBoxItem Tag="hblNo" IsSelected="True">하우스 B/L (HBL)</ComboBoxItem>
+                <ComboBoxItem Tag="mblNo">마스터 B/L (MBL)</ComboBoxItem>
+                <ComboBoxItem Tag="cargMtNo">화물번호</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Horizontal">
+            <Label Content="B/L 번호" VerticalAlignment="Center" Width="70"/>
+            <TextBox Name = "txtBlNo" Text="AW15CY16JR1106" VerticalAlignment="Center" Width="200"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="3" Orientation="Horizontal">
+            <Label Content="귀속연도" VerticalAlignment="Center" Width="70"/>
+            <ComboBox Name="selBlYy" VerticalAlignment="Center" Width="200" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="4" Orientation="Horizontal">
+            <Label Content="화물번호" VerticalAlignment="Center" Width="70"/>
+            <TextBox Name="txtCargMtNo" Text="" VerticalAlignment="Center" Width="200"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="5" Orientation="Horizontal" VerticalAlignment="Bottom">
+            <Button x:Name="btnOk" Content="입력" Width="75" Height="30" Click="clickedBtnOk"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
