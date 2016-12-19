@@ -39,7 +39,8 @@
                 <Fluent:RibbonGroupBox Header="관리">
                     <Fluent:Button Header="면장관리"
                                Icon="Images\something.png"
-                               LargeIcon="Images\something.png"/>
+                               LargeIcon="Images\something.png"
+                               Click="ManagePermitClicked"/>
                     <Fluent:Button Header="운송관리"
                                Icon="Images\something.png"
                                LargeIcon="Images\something.png" />

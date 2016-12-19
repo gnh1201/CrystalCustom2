@@ -85,7 +85,7 @@ namespace CrystalCustoms2.view
             PermitViewerInstance = new PermitViewer(documentPane, permitInfo);
             LayoutDocument ld = new LayoutDocument
             {
-                ContentId = "PermitControl",
+                ContentId = "PermitViewer",
                 Title = "수입면장확인",
                 Content = PermitViewerInstance,
                 IconSource = new BitmapImage(new Uri("images/document.png", UriKind.Relative))

@@ -12,7 +12,7 @@ using System.IO;
 using CrystalCustoms2.controller;
 using CrystalCustoms2.common;
 using CrystalCustoms2.model.KoreaCustomsModel;
-
+using LiteDB;
 
 namespace CrystalCustoms2.networking
 {
@@ -111,6 +111,14 @@ namespace CrystalCustoms2.networking
 
                 // Api 참조 횟수 업데이트
                 OpApikeys.UsedCountUp(serviceName);
+            }
+            
+            // db에 저장
+            using (var db = new LiteDatabase(@"cargCsclPrgsInfoQryRtnVo.db"))
+            {
+                var items = db.GetCollection<cargCsclPrgsInfoQryRtnVo>("cargCsclPrgsInfoQryRtnVo");
+                var item = ResponseResult;
+                items.Insert(item);
             }
 
             return ResponseResult;

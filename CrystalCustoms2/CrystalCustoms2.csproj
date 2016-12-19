@@ -53,6 +53,10 @@
       <HintPath>..\packages\Fluent.Ribbon.4.0.3.394\lib\net45\Fluent.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="LiteDB, Version=2.0.4.0, Culture=neutral, PublicKeyToken=4ee40123013c9f27, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiteDB.2.0.4\lib\net35\LiteDB.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\RestSharp.105.2.3\lib\net452\RestSharp.dll</HintPath>
       <Private>True</Private>
@@ -138,6 +142,9 @@
     <Compile Include="view\ManageEstimate.xaml.cs">
       <DependentUpon>ManageEstimate.xaml</DependentUpon>
     </Compile>
+    <Compile Include="view\ManagePermit.xaml.cs">
+      <DependentUpon>ManagePermit.xaml</DependentUpon>
+    </Compile>
     <Compile Include="view\ManageSettlement.xaml.cs">
       <DependentUpon>ManageSettlement.xaml</DependentUpon>
     </Compile>
@@ -198,6 +205,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="view\ManageEstimate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\ManagePermit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

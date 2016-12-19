@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="CrystalCustoms2.view.ManagePermit"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CrystalCustoms2.view"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="500"
+             Loaded="Control_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height = "40" />
+            <RowDefinition Height = "50" />
+            <RowDefinition Height = "*" />
+        </Grid.RowDefinitions>
+
+        <Label Content="면장조회" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="0" />
+
+        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal">
+            <Button x:Name="btnAdd" Content="면장추가" Width="95" Height="30" Click="ClickedBtnAdd"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="2">
+            <DataGrid x:Name="permitDataGrid" IsReadOnly="True" SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Stretch">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="키번호" Binding="{Binding Path=hblNo}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</UserControl>
