@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CrystalCustoms2.view"
              mc:Ignorable="d" 
-             d:DesignHeight="500" d:DesignWidth="500">
+             d:DesignHeight="1000" d:DesignWidth="1000">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height = "40" />
@@ -31,6 +31,8 @@
                 <RowDefinition Height = "40" />
                 <RowDefinition Height = "40" />
                 <RowDefinition Height = "40" />
+                <RowDefinition Height = "40" />
+                <RowDefinition Height = "*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width = "*" />
@@ -94,6 +96,40 @@
             </StackPanel>
 
             <Label Content="관세 및 수수료" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="4" VerticalAlignment="Center"/>
+            <StackPanel Grid.Column="0" Grid.Row="9" Orientation="Horizontal">
+                <Label Content="관세" VerticalAlignment="Center" Width="120"/>
+                <TextBox  Text="" VerticalAlignment="Center" Width="200"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Grid.Row="9" Orientation="Horizontal">
+                <Label Content="부가세" VerticalAlignment="Center" Width="120"/>
+                <TextBox  Text="" VerticalAlignment="Center" Width="200"/>
+            </StackPanel>
+            <StackPanel Grid.Column="0" Grid.Row="10" Orientation="Horizontal">
+                <Label Content="통관수수료" VerticalAlignment="Center" Width="120"/>
+                <TextBox  Text="" VerticalAlignment="Center" Width="200"/>
+            </StackPanel>
+
+            <Label Content="상세정보" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="11" Grid.ColumnSpan="4" VerticalAlignment="Center"/>
+            <Grid Grid.Column="0" Grid.Row="12" Grid.ColumnSpan="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width = "*" />
+                    <ColumnDefinition Width = "*" />
+                    <ColumnDefinition Width = "*" />
+                    <ColumnDefinition Width = "*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                </Grid.RowDefinitions>
+                <Label Content="항목" Grid.Row="0" Grid.Column ="0" VerticalAlignment="Center" Width="200"/>
+                <TextBox Text="" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Width="200"/>
+            </Grid>
         </Grid>
     </Grid>
 </UserControl>
