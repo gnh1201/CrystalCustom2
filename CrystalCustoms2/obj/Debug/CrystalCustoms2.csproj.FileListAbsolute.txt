@@ -61,3 +61,7 @@ C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCust
 C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\Debug\view\SettleControl.baml
 C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\Debug\view\ManageStocks.g.cs
 C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\Debug\view\ManageStocks.baml
+C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\Debug\view\AreinControl.g.cs
+C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\Debug\view\AreinControl.baml
+C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\Debug\view\ManageEstimate.g.cs
+C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\Debug\view\ManageEstimate.baml

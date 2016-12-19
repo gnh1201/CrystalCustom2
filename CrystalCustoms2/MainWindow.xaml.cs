@@ -20,6 +20,7 @@ namespace CrystalCustoms2
         private AppSetting AppSettingInstance = null;
         private SettleControl SettleControlInstance = null;
         private ManageAddressBook AddressBookInstance = null;
+        private ManageEstimate ManageEstimateInstance = null;
 
         public MainWindow()
         {
@@ -90,6 +91,20 @@ namespace CrystalCustoms2
                 ContentId = "AddressBook",
                 Title = "거래처 관리",
                 Content = AddressBookInstance,
+                IconSource = new BitmapImage(new Uri("images/document.png", UriKind.Relative))
+            };
+            documentPane.Children.Add(ld);
+            documentPane.Children.Last().IsActive = true;
+        }
+
+        private void ManageEstimateClicked(object sender, RoutedEventArgs e)
+        {
+            ManageEstimateInstance = new ManageEstimate(documentPane);
+            LayoutDocument ld = new LayoutDocument
+            {
+                ContentId = "ManageEstimate",
+                Title = "견적서 관리",
+                Content = ManageEstimateInstance,
                 IconSource = new BitmapImage(new Uri("images/document.png", UriKind.Relative))
             };
             documentPane.Children.Add(ld);

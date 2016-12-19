@@ -126,11 +126,17 @@
     <Compile Include="view\AppSetting.xaml.cs">
       <DependentUpon>AppSetting.xaml</DependentUpon>
     </Compile>
+    <Compile Include="view\AreinControl.xaml.cs">
+      <DependentUpon>AreinControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="view\ManageAddressBook.xaml.cs">
       <DependentUpon>ManageAddressBook.xaml</DependentUpon>
     </Compile>
     <Compile Include="view\ManageApikeys.xaml.cs">
       <DependentUpon>ManageApikeys.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\ManageEstimate.xaml.cs">
+      <DependentUpon>ManageEstimate.xaml</DependentUpon>
     </Compile>
     <Compile Include="view\ManageSettlement.xaml.cs">
       <DependentUpon>ManageSettlement.xaml</DependentUpon>
@@ -179,11 +185,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="view\AreinControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="view\ManageAddressBook.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="view\ManageApikeys.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\ManageEstimate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

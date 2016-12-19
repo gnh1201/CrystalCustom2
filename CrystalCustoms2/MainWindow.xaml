@@ -46,9 +46,10 @@
                 </Fluent:RibbonGroupBox>
 
                 <Fluent:RibbonGroupBox Header="영업">
-                    <Fluent:Button Header="견적생성"
+                    <Fluent:Button Header="견적관리"
                                Icon="Images\something.png"
-                               LargeIcon="Images\something.png"/>
+                               LargeIcon="Images\something.png"
+                               Click="ManageEstimateClicked"/>
                     <Fluent:Button Header="판매관리"
                                Icon="Images\something.png"
                                LargeIcon="Images\something.png" />

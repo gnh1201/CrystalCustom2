@@ -60,7 +60,7 @@
             <Button x:Name="btnNext" Content="다음" Width="75" Height="30" Click="ClickedBtnNext"/>
         </StackPanel>
 
-        <StackPanel Grid.Column="0" Grid.Row="8" Orientation="Horizontal" >
+        <StackPanel Grid.Column="0" Grid.Row="8">
             <DataGrid x:Name="keyDataGrid" IsReadOnly="True" SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Stretch">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="키번호" Binding="{Binding Path=ID}"/>

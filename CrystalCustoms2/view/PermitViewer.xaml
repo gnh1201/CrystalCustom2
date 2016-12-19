@@ -23,7 +23,7 @@
 
         <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal">
             <Button x:Name="btnSettle" Content="통관/운송정보 등록" Width="150" Height="30" Click="ClickedBtnSettle"/>
-            <Button x:Name="btnStock" Content="재고정보 등록" Width="150" Height="30" Click="ClickedBtnStock"/>
+            <!--<Button x:Name="btnStock" Content="재고정보 등록" Width="150" Height="30" Click="ClickedBtnStock"/>-->
         </StackPanel>
 
         <Label Content="수입면장 기본정보" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="2" />

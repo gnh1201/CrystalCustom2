@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\App.xaml
-9-974910670
+11-1855414328
 
-491745609353
+511533522068
 29-835130482
-MainWindow.xaml;view\AppSetting.xaml;view\ManageAddressBook.xaml;view\ManageApikeys.xaml;view\ManageSettlement.xaml;view\ManageStocks.xaml;view\PermitControl.xaml;view\PermitViewer.xaml;view\SettleControl.xaml;
+MainWindow.xaml;view\AppSetting.xaml;view\AreinControl.xaml;view\ManageAddressBook.xaml;view\ManageApikeys.xaml;view\ManageEstimate.xaml;view\ManageSettlement.xaml;view\ManageStocks.xaml;view\PermitControl.xaml;view\PermitViewer.xaml;view\SettleControl.xaml;
 
 False
 
