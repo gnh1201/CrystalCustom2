@@ -18,7 +18,7 @@ namespace CrystalCustoms2.controller
             "invoice_id",
             "settle_name",
             "settle_serialnum",
-            "settle_cyclenum",
+            "settle_cycletime",
             "settle_shipdate",
             "settle_cleardate",
             "settle_weight",

@@ -18,106 +18,134 @@
 
         <Label Content="운송정보 입력" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="0"/>
 
-        <Grid x:Name="settleForm" Grid.Column="0" Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height = "40" />
-                <RowDefinition Height = "40" />
-                <RowDefinition Height = "40" />
-                <RowDefinition Height = "40" />
-                <RowDefinition Height = "40" />
-                <RowDefinition Height = "40" />
-                <RowDefinition Height = "40" />
-                <RowDefinition Height = "40" />
-                <RowDefinition Height = "40" />
-                <RowDefinition Height = "40" />
-                <RowDefinition Height = "40" />
-                <RowDefinition Height = "40" />
-                <RowDefinition Height = "40" />
-                <RowDefinition Height = "*" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width = "*" />
-                <ColumnDefinition Width = "*" />
-            </Grid.ColumnDefinitions>
+        <ScrollViewer Grid.Column="0" Grid.Row="1">
+            <Grid x:Name="settleForm">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width = "*" />
+                    <ColumnDefinition Width = "*" />
+                </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
-                <Label Content="화주명" VerticalAlignment="Center" Width="120"/>
-                <TextBox Name="txtSettleName" Text="" VerticalAlignment="Center" Width="200"/>
-            </StackPanel>
-            <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal">
-                <Label Content="운송편명" VerticalAlignment="Center" Width="120"/>
-                <TextBox Name="txtShipno" Text="" VerticalAlignment="Center" Width="200"/>
-            </StackPanel>
-            <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Horizontal">
-                <Label Content="Loading Port" VerticalAlignment="Center" Width="120"/>
-                <TextBox Name="txtLoadport" Text="" VerticalAlignment="Center" Width="200"/>
-            </StackPanel>
-            <StackPanel Grid.Column="0" Grid.Row="3" Orientation="Horizontal">
-                <Label Content="Size" VerticalAlignment="Center" Width="120"/>
-                <TextBox Name="txtSize" Text="" VerticalAlignment="Center" Width="200"/>
-            </StackPanel>
-            <StackPanel Grid.Column="0" Grid.Row="4" Orientation="Horizontal">
-                <Label Content="도착일" VerticalAlignment="Center" Width="120"/>
-                <TextBox Name="txtArrivedate" VerticalAlignment="Center" Width="200"/>
-            </StackPanel>
+                <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
+                    <Label Content="화주명" VerticalAlignment="Center" Width="120"/>
+                    <TextBox Name="txtSettleName" Text="*코퍼레이션" VerticalAlignment="Center" Width="200"/>
+                </StackPanel>
+                <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal">
+                    <Label Content="운송편명" VerticalAlignment="Center" Width="120"/>
+                    <TextBox Name="txtShipno" Text="OZ121" VerticalAlignment="Center" Width="200"/>
+                </StackPanel>
+                <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Horizontal">
+                    <Label Content="Loading Port" VerticalAlignment="Center" Width="120"/>
+                    <TextBox Name="txtLoadport" Text="NAGOYA" VerticalAlignment="Center" Width="200"/>
+                </StackPanel>
+                <StackPanel Grid.Column="0" Grid.Row="3" Orientation="Horizontal">
+                    <Label Content="Size" VerticalAlignment="Center" Width="120"/>
+                    <TextBox Name="txtSize" Text="18" VerticalAlignment="Center" Width="200"/>
+                </StackPanel>
+                <StackPanel Grid.Column="0" Grid.Row="4" Orientation="Horizontal">
+                    <Label Content="도착일" VerticalAlignment="Center" Width="120"/>
+                    <TextBox Name="txtArrivedate" Text="2016-11-25 00:00:00" VerticalAlignment="Center" Width="200"/>
+                </StackPanel>
 
-            <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
-                <Label Content="담당자" VerticalAlignment="Center" Width="120"/>
-                <TextBox Name="txtSettleOwn" VerticalAlignment="Center" Width="200"/>
-            </StackPanel>
-            <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
-                <Label Content="B/L No (Master)" VerticalAlignment="Center" Width="120"/>
-                <TextBox Name="txtMblno" VerticalAlignment="Center" Width="200"/>
-            </StackPanel>
-            <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
-                <Label Content="B/L No (House)" VerticalAlignment="Center" Width="120"/>
-                <TextBox Name="txtHblno" VerticalAlignment="Center" Width="200"/>
-            </StackPanel>
-            <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
-                <Label Content="Arrived Port" VerticalAlignment="Center" Width="120"/>
-                <TextBox Name="txtArriveport" VerticalAlignment="Center" Width="200"/>
-            </StackPanel>
-            <StackPanel Grid.Column="1" Grid.Row="4" Orientation="Horizontal">
-                <Label Content="도착지" VerticalAlignment="Center" Width="120"/>
-                <TextBox Name="txtDtlLocation" VerticalAlignment="Center" Width="200"/>
-            </StackPanel>
+                <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
+                    <Label Content="담당자" VerticalAlignment="Center" Width="120"/>
+                    <TextBox Name="txtSettleOwn" Text="조* 사장님" VerticalAlignment="Center" Width="200"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+                    <Label Content="B/L No (Master)" VerticalAlignment="Center" Width="120"/>
+                    <TextBox Name="txtMblno" VerticalAlignment="Center" Width="200"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
+                    <Label Content="B/L No (House)" VerticalAlignment="Center" Width="120"/>
+                    <TextBox Name="txtHblno" VerticalAlignment="Center" Width="200"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
+                    <Label Content="Arrived Port" VerticalAlignment="Center" Width="120"/>
+                    <TextBox Name="txtArriveport" Text="INCHEON" VerticalAlignment="Center" Width="200"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Grid.Row="4" Orientation="Horizontal">
+                    <Label Content="도착지" VerticalAlignment="Center" Width="120"/>
+                    <TextBox Name="txtDtlLocation" Text="인천공항" VerticalAlignment="Center" Width="200"/>
+                </StackPanel>
 
-            <Label Content="측량정보" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="4" VerticalAlignment="Center"/>
-            <StackPanel Grid.Column="0" Grid.Row="6" Orientation="Horizontal">
-                <Label Content="Weight" VerticalAlignment="Center" Width="120"/>
-                <TextBox Name="txtWeight" Text="" VerticalAlignment="Center" Width="200"/>
-            </StackPanel>
-            <StackPanel Grid.Column="0" Grid.Row="7" Orientation="Horizontal">
-                <Label Content="Weight Unit" VerticalAlignment="Center" Width="120"/>
-                <TextBox Name="txtWeightUnit" Text="" VerticalAlignment="Center" Width="200"/>
-            </StackPanel>
-            <StackPanel Grid.Column="2" Grid.Row="6" Orientation="Horizontal">
-                <Label Content="Volume" VerticalAlignment="Center" Width="120"/>
-                <TextBox Name="txtVolume" Text="txtVolume" VerticalAlignment="Center" Width="200"/>
-            </StackPanel>
-            <StackPanel Grid.Column="2" Grid.Row="7" Orientation="Horizontal">
-                <Label Content="Volume Unit" VerticalAlignment="Center" Width="120"/>
-                <TextBox Name="txtVolumeUnit" VerticalAlignment="Center" Width="200"/>
-            </StackPanel>
+                <Label Content="측량정보" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="4" VerticalAlignment="Center"/>
+                <StackPanel Grid.Column="0" Grid.Row="6" Orientation="Horizontal">
+                    <Label Content="Weight" VerticalAlignment="Center" Width="120"/>
+                    <TextBox Name="txtWeight" Text="402" VerticalAlignment="Center" Width="200"/>
+                </StackPanel>
+                <StackPanel Grid.Column="0" Grid.Row="7" Orientation="Horizontal">
+                    <Label Content="Weight Unit" VerticalAlignment="Center" Width="120"/>
+                    <TextBox Name="txtWeightUnit" Text="KG" VerticalAlignment="Center" Width="200"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2" Grid.Row="6" Orientation="Horizontal">
+                    <Label Content="Volume" VerticalAlignment="Center" Width="120"/>
+                    <TextBox Name="txtVolume" Text="0" VerticalAlignment="Center" Width="200"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2" Grid.Row="7" Orientation="Horizontal">
+                    <Label Content="Volume Unit" VerticalAlignment="Center" Width="120"/>
+                    <TextBox Name="txtVolumeUnit" Text="CBM" VerticalAlignment="Center" Width="200"/>
+                </StackPanel>
 
-            <Label Content="관세 및 수수료" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="4" VerticalAlignment="Center"/>
-            <StackPanel Grid.Column="0" Grid.Row="9" Orientation="Horizontal">
-                <Label Content="관세" VerticalAlignment="Center" Width="120"/>
-                <TextBox Name="txtSettleDuty" Text="" VerticalAlignment="Center" Width="200"/>
-            </StackPanel>
-            <StackPanel Grid.Column="1" Grid.Row="9" Orientation="Horizontal">
-                <Label Content="부가세" VerticalAlignment="Center" Width="120"/>
-                <TextBox Name="txtSettleVat" Text="" VerticalAlignment="Center" Width="200"/>
-            </StackPanel>
-            <StackPanel Grid.Column="0" Grid.Row="10" Orientation="Horizontal">
-                <Label Content="통관수수료" VerticalAlignment="Center" Width="120"/>
-                <TextBox Name="txtSettleCommision" Text="" VerticalAlignment="Center" Width="200"/>
-            </StackPanel>
+                <Label Content="관세 및 수수료" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="4" VerticalAlignment="Center"/>
+                <StackPanel Grid.Column="0" Grid.Row="9" Orientation="Horizontal">
+                    <Label Content="관세" VerticalAlignment="Center" Width="120"/>
+                    <TextBox Name="txtSettleDuty" Text="100000" VerticalAlignment="Center" Width="200"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Grid.Row="9" Orientation="Horizontal">
+                    <Label Content="부가세" VerticalAlignment="Center" Width="120"/>
+                    <TextBox Name="txtSettleVat" Text="10000" VerticalAlignment="Center" Width="200"/>
+                </StackPanel>
+                <StackPanel Grid.Column="0" Grid.Row="10" Orientation="Horizontal">
+                    <Label Content="통관수수료" VerticalAlignment="Center" Width="120"/>
+                    <TextBox Name="txtSettleCommision" Text="100000" VerticalAlignment="Center" Width="200"/>
+                </StackPanel>
 
-            <Label Content="운송등록 작업" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="11" Grid.ColumnSpan="4" VerticalAlignment="Center"/>
-            <StackPanel Grid.ColumnSpan="4" Grid.Row="12" Orientation="Horizontal">
-                <Button Content="운송등록 및 입고" Width="180"/>
-            </StackPanel>
-        </Grid>
+                <Label Content="입고정보" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="11" Grid.ColumnSpan="4" VerticalAlignment="Center"/>
+                <StackPanel Grid.Column="0" Grid.Row="12" Orientation="Horizontal">
+                    <Label Content="물품이름" VerticalAlignment="Center" Width="120"/>
+                    <TextBox Name="txtProductName" Text="TEST-PRODUCT-1" VerticalAlignment="Center" Width="200"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Grid.Row="12" Orientation="Horizontal">
+                    <Label Content="물품수량" VerticalAlignment="Center" Width="120"/>
+                    <TextBox Name="txtProductQty" Text="10" VerticalAlignment="Center" Width="200"/>
+                </StackPanel>
+                <StackPanel Grid.Column="0" Grid.Row="13" Orientation="Horizontal">
+                    <Label Content="물품단가" VerticalAlignment="Center" Width="120"/>
+                    <TextBox Name="txtProductUnitprice" Text="100000" VerticalAlignment="Center" Width="200"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Grid.Row="13" Orientation="Horizontal">
+                    <Label Content="물품규격" VerticalAlignment="Center" Width="120"/>
+                    <TextBox Name="txtProductStandard" Text="STD" VerticalAlignment="Center" Width="200"/>
+                </StackPanel>
+
+                <Label Content="운송등록 작업" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="14" Grid.ColumnSpan="4" VerticalAlignment="Center"/>
+                <StackPanel Grid.ColumnSpan="4" Grid.Row="15" Orientation="Horizontal">
+                    <Button Content="운송등록 및 입고" Width="180" Height="30" Click="ClickedBtnOk"/>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
     </Grid>
+
 </UserControl>

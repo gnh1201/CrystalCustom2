@@ -125,6 +125,7 @@
     <Compile Include="common\WriteTextFile.cs" />
     <Compile Include="controls\ComboboxItem.cs" />
     <Compile Include="controls\TextboxItem.cs" />
+    <Compile Include="model\Inventories.cs" />
     <Compile Include="model\KoreaCustomsModel\cargCsclPrgsInfoQryRtnVo.cs" />
     <Compile Include="networking\KoreaCustoms.cs" />
     <Compile Include="view\AppSetting.xaml.cs">

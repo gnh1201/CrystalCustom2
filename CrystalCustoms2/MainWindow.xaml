@@ -55,11 +55,13 @@
                                Icon="Images\something.png"
                                LargeIcon="Images\something.png" />
                 </Fluent:RibbonGroupBox>
+                <!--
                 <Fluent:RibbonGroupBox Header="재고">
                     <Fluent:Button Header="재고관리"
                                Icon="Images\something.png"
                                LargeIcon="Images\something.png"/>
                 </Fluent:RibbonGroupBox>
+                -->
                 <Fluent:RibbonGroupBox Header="고객">
                     <Fluent:Button Header="거래처관리"
                                Icon="Images\something.png"

@@ -14,7 +14,10 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Xceed.Wpf.AvalonDock.Layout;
 
+using CrystalCustoms2.model;
 using CrystalCustoms2.model.KoreaCustomsModel;
+using CrystalCustoms2.controller;
+using LiteDB;
 
 namespace CrystalCustoms2.view
 {
@@ -23,6 +26,7 @@ namespace CrystalCustoms2.view
     /// </summary>
     public partial class SettleControl : UserControl
     {
+        private cargCsclPrgsInfoQryRtnVo responseResult = null;
         private Dictionary<string, string> settleDict = new Dictionary<string, string>();
 
         public SettleControl()
@@ -32,12 +36,64 @@ namespace CrystalCustoms2.view
 
         public SettleControl(LayoutDocumentPane documentPaneInstance, cargCsclPrgsInfoQryRtnVo responseResultInstance = null)
         {
+            responseResult = responseResultInstance;
             InitializeComponent();
+            InitializeControls();
         }
 
+        private void InitializeControls()
+        {
+            if(responseResult != null) {
+                txtMblno.Text = responseResult.cargCsclPrgsInfoQryVo.First().mblNo;
+                txtHblno.Text = responseResult.cargCsclPrgsInfoQryVo.First().hblNo;
+            }
+        }
+
+        // 운송등록 및 입고
         private void ClickedBtnOk(object sender, RoutedEventArgs e)
         {
+            // 운송정보 등록
+            Settles st = new Settles();
+            st.SettleName = txtSettleName.Text;
+            st.SettleShipno = txtShipno.Text;
+            st.SettleLoadport = txtLoadport.Text;
+            st.SettleSize = Int32.Parse(txtSize.Text);
+            st.SettleArriveDate = DateTime.Parse(txtArrivedate.Text);
+            st.SettleOwn = txtSettleOwn.Text;
+            st.SettleMblno = txtMblno.Text;
+            st.SettleHblno = txtHblno.Text;
+            st.SettleArriveport = txtArriveport.Text;
+            st.SettleWeight = txtWeight.Text;
+            st.SettleWeightUnit = txtWeightUnit.Text;
+            st.SettleVolume = Int32.Parse(txtVolume.Text);
+            st.SettleVolumeUnit = txtVolumeUnit.Text;
+            st.SettleDuty = Int32.Parse(txtSettleDuty.Text);
+            st.SettleVat = Int32.Parse(txtSettleVat.Text);
+            st.SettleCommision = Int32.Parse(txtSettleCommision.Text);
 
+            if(OpSettles.AddItem(st) > 0)
+            {
+                Xceed.Wpf.Toolkit.MessageBox.Show("운송정보를 등록하였습니다.");
+            } else
+            {
+                Xceed.Wpf.Toolkit.MessageBox.Show("다시 시도하여 주십시오.");
+            }
+
+            // 재고정보 등록
+            using (var db = new LiteDatabase(@"Inventories.db"))
+            {
+                var col = db.GetCollection<Inventories>("Inventories");
+                var item = new Inventories
+                {
+                    Name = txtProductName.Text,
+                    Mblno = txtMblno.Text,
+                    Hblno = txtHblno.Text,
+                    Qty = txtProductQty.Text,
+                    Standard = txtProductStandard.Text
+                };
+                
+                col.Insert(item);
+            }
         }
 
         private void InitializeDIctionary()
