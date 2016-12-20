@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CrystalCustoms2.model;
+using LiteDB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,6 +33,48 @@ namespace CrystalCustoms2.view
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        /// <summary>
+        ///  견적 저장
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ClickedBtnSave(object sender, RoutedEventArgs e)
+        {
+            Estimates dataItem = new Estimates
+            {
+                ReptName = txtReptName.Text,
+                ReptTel = txtReptTel.Text,
+                ReptFax = txtReptFax.Text,
+                ReptOwn = txtReptOwn.Text,
+                ReptAddress = txtReptAddress.Text,
+                ReptDate = txtReptDate.Text,
+                ReptNo = txtReptNo.Text,
+                SendName = txtSendName.Text,
+                SendAddress = txtSendAddress.Text,
+                SendTel = txtSendTel.Text,
+                SendFax = txtSendFax.Text,
+                SendDeadline = txtSendDeadline.Text,
+                SendOwn = txtSendOwn.Text,
+                SalesOwn = txtSalesOwn.Text,
+                ShipDate = txtShipDate.Text,
+                ShipType = txtShipType.Text,
+                DeliveryPoint = txtDeliveryPoint.Text,
+                PayCond = txtPayCond.Text,
+                TaxRate = txtTaxRate.Text,
+                Items = new List<EstimateItems>(),
+                Amount = txtAmount.Text
+            };
+
+            // db에 저장
+            using (var db = new LiteDatabase(@"Estimates.db"))
+            {
+                // 견적 등록
+                var col = db.GetCollection<Estimates>("Estimates");
+                var item = dataItem;
+                col.Insert(item);
+            }
         }
 
         private void ClickedBtnAddItem(object sender, RoutedEventArgs e)
