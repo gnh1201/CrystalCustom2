@@ -40,7 +40,7 @@ namespace CrystalCustoms2.common
 
         public static string write(DataTable dt)
         {
-            string pdfname = generateFileName("pdf");
+            string pdfname = "reports/" + generateFileName("pdf");
             Document document = new Document(PageSize.A4);
             iTextSharp.text.io.StreamUtil.AddToResourceSearch("iTextAsian.dll");
 

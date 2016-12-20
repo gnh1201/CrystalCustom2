@@ -52,7 +52,7 @@ namespace CrystalCustoms2.view
                 var col = db.GetCollection<Estimates>("Estimates");
                 var results = col.FindAll();
 
-                DataTable dataTable = new DataTable();
+                dataTable = new DataTable();
 
                 // 컬럼 생성
                 string[] dataColumnBindNames = {
@@ -152,7 +152,7 @@ namespace CrystalCustoms2.view
             dt2.Columns.Add("항목값", typeof(string));
 
             int i = 0;
-            foreach (DataColumn column in dt2.Columns)
+            foreach (DataColumn column in dataTable.Columns)
             {
                 dt2.Rows.Add(i+1, column.ColumnName, row[i]);
 
