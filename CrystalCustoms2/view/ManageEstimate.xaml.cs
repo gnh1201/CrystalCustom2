@@ -26,6 +26,7 @@ namespace CrystalCustoms2.view
         public int saveMode = 0;
         private DataTable dataTable = null;
         private LayoutDocumentPane documentPane;
+        private NewEstimateControl NewEstimateControlInstance = null;
 
         public ManageEstimate(LayoutDocumentPane documentPane)
         {
@@ -47,9 +48,19 @@ namespace CrystalCustoms2.view
         {
         }
 
-        // 신규
-        private void ClickedBtnSave(object sender, EventArgs e)
+        // 신규 견적추가
+        private void ClickedBtnAdd(object sender, EventArgs e)
         {
+            NewEstimateControlInstance = new NewEstimateControl(documentPane);
+            LayoutDocument ld = new LayoutDocument
+            {
+                ContentId = "NewEstimateControl",
+                Title = "새로운 견적 추가",
+                Content = NewEstimateControlInstance,
+                IconSource = new BitmapImage(new Uri("images/document.png", UriKind.Relative))
+            };
+            documentPane.Children.Add(ld);
+            documentPane.Children.Last().IsActive = true;
         }
 
         // 정보 수정

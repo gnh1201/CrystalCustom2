@@ -68,3 +68,5 @@ C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCust
 C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\bin\Debug\LiteDB.dll
 C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\Debug\view\ManagePermit.g.cs
 C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\Debug\view\ManagePermit.baml
+C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\Debug\view\NewEstimateControl.g.cs
+C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\Debug\view\NewEstimateControl.baml

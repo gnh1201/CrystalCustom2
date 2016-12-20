@@ -28,10 +28,10 @@
             <TextBox Name="txtKeyType" Text="" VerticalAlignment="Center" Width="240"/>
         </StackPanel>
         <StackPanel Grid.Column="0" Grid.Row="3" Orientation="Horizontal">
-            <Button x:Name="btnSave" Content="신규" Width="75" Height="30" Click="ClickedBtnSave"/>
+            <Button x:Name="btnSave" Content="견적서 신규생성" Width="140" Height="30" Click="ClickedBtnAdd"/>
             <Button x:Name="btnDelete" Content="삭제" Width="75" Height="30" Click="ClickedBtnDelete"/>
             <Button x:Name="btnEdit" Content="수정" Width="75" Height="30" Click="ClickedBtnEdit"/>
-            <Button x:Name="btnComplete" Content="판매완료" Width="75" Height="30" Click="ClickedBtnComplete"/>
+            <Button x:Name="btnComplete" Content="판매완료" Width="100" Height="30" Click="ClickedBtnComplete"/>
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="8">
