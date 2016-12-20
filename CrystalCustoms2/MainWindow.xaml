@@ -43,7 +43,8 @@
                                Click="ManagePermitClicked"/>
                     <Fluent:Button Header="운송관리"
                                Icon="Images\something.png"
-                               LargeIcon="Images\something.png" />
+                               LargeIcon="Images\something.png"
+                               Click="ManageSettlementClicked"/>
                 </Fluent:RibbonGroupBox>
 
                 <Fluent:RibbonGroupBox Header="영업">

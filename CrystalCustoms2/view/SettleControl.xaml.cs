@@ -46,6 +46,7 @@ namespace CrystalCustoms2.view
             if(responseResult != null) {
                 txtMblno.Text = responseResult.cargCsclPrgsInfoQryVo.First().mblNo;
                 txtHblno.Text = responseResult.cargCsclPrgsInfoQryVo.First().hblNo;
+                txtProductName.Text = responseResult.cargCsclPrgsInfoQryVo.First().prnm;
             }
         }
 
@@ -71,17 +72,9 @@ namespace CrystalCustoms2.view
             st.SettleVat = Int32.Parse(txtSettleVat.Text);
             st.SettleCommision = Int32.Parse(txtSettleCommision.Text);
 
-            if(OpSettles.AddItem(st) > 0)
-            {
-                Xceed.Wpf.Toolkit.MessageBox.Show("운송정보를 등록하였습니다.");
-            } else
-            {
-                Xceed.Wpf.Toolkit.MessageBox.Show("다시 시도하여 주십시오.");
-            }
-
-            // 재고정보 등록
             using (var db = new LiteDatabase(@"Inventories.db"))
             {
+                // 재고정보 등록
                 var col = db.GetCollection<Inventories>("Inventories");
                 var item = new Inventories
                 {
@@ -91,9 +84,15 @@ namespace CrystalCustoms2.view
                     Qty = txtProductQty.Text,
                     Standard = txtProductStandard.Text
                 };
-                
                 col.Insert(item);
+
+                // 운송정보 등록
+                var col2 = db.GetCollection<Settles>("Settles");
+                var item2 = st;
+                col2.Insert(item2);
             }
+
+            Xceed.Wpf.Toolkit.MessageBox.Show("운송정보를 등록하였습니다.");
         }
 
         private void InitializeDIctionary()

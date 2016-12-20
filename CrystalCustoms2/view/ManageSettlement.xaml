@@ -10,70 +10,19 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height = "40" />
-            <RowDefinition Height = "30" />
-            <RowDefinition Height = "30" />
-            <RowDefinition Height = "30" />
-            <RowDefinition Height = "30" />
-            <RowDefinition Height = "30" />
-            <RowDefinition Height = "30" />
             <RowDefinition Height = "50" />
             <RowDefinition Height = "*" />
         </Grid.RowDefinitions>
 
-        <Label Content="통관운송 정보관리" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="0" />
+        <Label Content="운송조회" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="0" />
 
         <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal">
-            <Label Content="인증키 번호" VerticalAlignment="Center" Width="120"/>
-            <TextBox Name="txtKeyId" Text="" VerticalAlignment="Center" Width="120" IsReadOnly="True" />
+            <Button x:Name="btnAdd" Content="운송추가" Width="95" Height="30" Click="ClickedBtnAdd"/>
         </StackPanel>
 
-        <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Horizontal">
-            <Label Content="인증키 유형" VerticalAlignment="Center" Width="120"/>
-            <TextBox Name="txtKeyType" Text="" VerticalAlignment="Center" Width="240"/>
-        </StackPanel>
-
-        <StackPanel Grid.Column="0" Grid.Row="3" Orientation="Horizontal">
-            <Label Content="인증키 이름" VerticalAlignment="Center" Width="120"/>
-            <TextBox Name="txtKeyName" Text="" VerticalAlignment="Center" Width="240"/>
-        </StackPanel>
-
-        <StackPanel Grid.Column="0" Grid.Row="4" Orientation="Horizontal">
-            <Label Content="인증키 설명" VerticalAlignment="Center" Width="120"/>
-            <TextBox Name="txtKeyDesc" Text="" VerticalAlignment="Center" Width="240"/>
-        </StackPanel>
-
-        <StackPanel Grid.Column="0" Grid.Row="5" Orientation="Horizontal">
-            <Label Content="인증키 코드" VerticalAlignment="Center" Width="120"/>
-            <TextBox Name = "txtKeycode" Text="" VerticalAlignment="Center" Width="240"/>
-        </StackPanel>
-
-        <StackPanel Grid.Column="0" Grid.Row="6" Orientation="Horizontal">
-            <Label Content="인증키 등록시간" VerticalAlignment="Center" Width="120"/>
-            <TextBox Name = "txtKeyDatetime" Text="" VerticalAlignment="Center" Width="240"/>
-        </StackPanel>
-
-        <StackPanel Grid.Column="0" Grid.Row="7" Orientation="Horizontal">
-            <Button x:Name="btnSave" Content="신규" Width="75" Height="30" Click="ClickedBtnSave"/>
-            <Button x:Name="btnDelete" Content="삭제" Width="75" Height="30" Click="ClickedBtnDelete"/>
-            <Button x:Name="btnEdit" Content="수정" Width="75" Height="30" Click="ClickedBtnEdit"/>
-            <Button x:Name="btnPrev" Content="이전" Width="75" Height="30" Click="ClickedBtnPrev"/>
-            <Button x:Name="btnNext" Content="다음" Width="75" Height="30" Click="ClickedBtnNext"/>
-        </StackPanel>
-
-        <StackPanel Grid.Column="0" Grid.Row="8">
-            <DataGrid x:Name="keyDataGrid" IsReadOnly="True" SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Stretch">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="키번호" Binding="{Binding Path=ID}"/>
-                    <DataGridTextColumn Header="키형식" Binding="{Binding Path=TYPE}"/>
-                    <DataGridTextColumn Header="키이름" Binding="{Binding Path=NAME}"/>
-                    <DataGridTextColumn Header="키설명" Binding="{Binding Path=DESC}"/>
-                    <DataGridTextColumn Header="키코드" Binding="{Binding Path=CODE}"/>
-                    <DataGridTextColumn Header="키접근횟수" Binding="{Binding Path=CNT}"/>
-                    <DataGridTextColumn Header="키최근사용날짜" Binding="{Binding Path=LAST}"/>
-                    <DataGridTextColumn Header="키등록날짜" Binding="{Binding Path=DATE}"/>
-                </DataGrid.Columns>
+        <StackPanel Grid.Column="0" Grid.Row="2">
+            <DataGrid x:Name="settleDataGrid" IsReadOnly="True" SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Stretch">
             </DataGrid>
         </StackPanel>
-
     </Grid>
 </UserControl>

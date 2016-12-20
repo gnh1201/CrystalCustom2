@@ -22,6 +22,7 @@ namespace CrystalCustoms2
         private ManageAddressBook AddressBookInstance = null;
         private ManageEstimate ManageEstimateInstance = null;
         private ManagePermit ManagePermitInstance = null;
+        private ManageSettlement ManageSettlementInstance = null;
 
         public MainWindow()
         {
@@ -120,6 +121,20 @@ namespace CrystalCustoms2
                 ContentId = "ManagePermit",
                 Title = "면장관리",
                 Content = ManagePermitInstance,
+                IconSource = new BitmapImage(new Uri("images/document.png", UriKind.Relative))
+            };
+            documentPane.Children.Add(ld);
+            documentPane.Children.Last().IsActive = true;
+        }
+
+        private void ManageSettlementClicked(object sender, RoutedEventArgs e)
+        {
+            ManageSettlementInstance = new ManageSettlement(documentPane);
+            LayoutDocument ld = new LayoutDocument
+            {
+                ContentId = "ManageSettlement",
+                Title = "운송관리",
+                Content = ManageSettlementInstance,
                 IconSource = new BitmapImage(new Uri("images/document.png", UriKind.Relative))
             };
             documentPane.Children.Add(ld);

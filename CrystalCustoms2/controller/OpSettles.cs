@@ -24,7 +24,7 @@ namespace CrystalCustoms2.controller
             "settle_weight",
             "settle_weight_unit",
             "settle_remit",
-            "settle_expand",
+            "settle_expend",
             "settle_balance",
             "settle_buy",
             "settle_sell",
@@ -181,7 +181,7 @@ namespace CrystalCustoms2.controller
                     cmd.Parameters.AddWithValue("@settle_weight", st.SettleWeight);
                     cmd.Parameters.AddWithValue("@settle_weight_unit", st.SettleWeightUnit);
                     cmd.Parameters.AddWithValue("@settle_remit", st.SettleRemit);
-                    cmd.Parameters.AddWithValue("@settle_expand", st.SettleExpend);
+                    cmd.Parameters.AddWithValue("@settle_expend", st.SettleExpend);
                     cmd.Parameters.AddWithValue("@settle_balance", st.SettleBalance);
                     cmd.Parameters.AddWithValue("@settle_buy", st.SettleBuy);
                     cmd.Parameters.AddWithValue("@settle_sell", st.SettleSell);
@@ -259,7 +259,7 @@ namespace CrystalCustoms2.controller
                     cmd.Parameters.AddWithValue("@settle_weight", st.SettleWeight);
                     cmd.Parameters.AddWithValue("@settle_weight_unit", st.SettleWeightUnit);
                     cmd.Parameters.AddWithValue("@settle_remit", st.SettleRemit);
-                    cmd.Parameters.AddWithValue("@settle_expand", st.SettleExpend);
+                    cmd.Parameters.AddWithValue("@settle_expend", st.SettleExpend);
                     cmd.Parameters.AddWithValue("@settle_balance", st.SettleBalance);
                     cmd.Parameters.AddWithValue("@settle_buy", st.SettleBuy);
                     cmd.Parameters.AddWithValue("@settle_mblno", st.SettleMblno);
