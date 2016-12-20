@@ -27,5 +27,21 @@ namespace CrystalCustoms2.view
             documentPane = documentPaneInstance;
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ClickedBtnAddItem(object sender, RoutedEventArgs e)
+        {
+            WindowInventory newForm = new WindowInventory(this);
+            newForm.Show();
+        }
+
+        private void ClickedBtnRemoveItem(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

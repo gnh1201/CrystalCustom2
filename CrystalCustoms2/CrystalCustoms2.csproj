@@ -164,6 +164,9 @@
     <Compile Include="view\SettleControl.xaml.cs">
       <DependentUpon>SettleControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="view\WindowInventory.xaml.cs">
+      <DependentUpon>WindowInventory.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -237,6 +240,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="view\SettleControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\WindowInventory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

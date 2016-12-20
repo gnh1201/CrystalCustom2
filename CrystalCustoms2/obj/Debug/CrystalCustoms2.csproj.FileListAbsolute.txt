@@ -70,3 +70,5 @@ C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCust
 C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\Debug\view\ManagePermit.baml
 C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\Debug\view\NewEstimateControl.g.cs
 C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\Debug\view\NewEstimateControl.baml
+C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\Debug\view\WindowInventory.g.cs
+C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\Debug\view\WindowInventory.baml

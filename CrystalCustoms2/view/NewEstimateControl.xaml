@@ -35,7 +35,7 @@
                     <RowDefinition Height = "40" />
                     <RowDefinition Height = "40" />
                     <RowDefinition Height = "40" />
-                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "200" />
                     <RowDefinition Height = "40" />
                     <RowDefinition Height = "40" />
                     <RowDefinition Height = "40" />
@@ -124,6 +124,21 @@
                 <StackPanel Grid.Column="0" Grid.Row="12" Orientation="Horizontal">
                     <Label Content="조건" VerticalAlignment="Center" Width="120"/>
                     <TextBox Name="txtPayCond" Text="귀원결제조건" VerticalAlignment="Center" Width="200"/>
+                </StackPanel>
+
+                <Label Content="견적품목" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="13" Grid.ColumnSpan="2" VerticalAlignment="Center"/>
+                <DataGrid Grid.Column="0" Grid.Row="14" Grid.ColumnSpan="2">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="번호"/>
+                        <DataGridTextColumn Header="내역"/>
+                        <DataGridTextColumn Header="수량"/>
+                        <DataGridTextColumn Header="단가"/>
+                        <DataGridTextColumn Header="금액"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <StackPanel Grid.Column="0" Grid.Row="15" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Content="추가" Width="100" Height="30" Click="ClickedBtnAddItem" />
+                    <Button Content="삭제" Width="100" Height="30" Click="ClickedBtnRemoveItem" />
                 </StackPanel>
             </Grid>
         </ScrollViewer>
