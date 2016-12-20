@@ -21,7 +21,7 @@
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="2">
-            <DataGrid x:Name="permitDataGrid" IsReadOnly="True" SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Stretch">
+            <DataGrid x:Name="permitDataGrid" Grid.Column="0" Grid.Row="2" IsReadOnly="True" SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Stretch">
                 <DataGrid.Columns>
                     <!--<DataGridTextColumn Header="" Binding="{Binding Path=hblNo}"/>-->
                 </DataGrid.Columns>

@@ -129,7 +129,7 @@
                 </StackPanel>
 
                 <Label Content="견적품목" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="13" Grid.ColumnSpan="2" VerticalAlignment="Center"/>
-                <DataGrid Grid.Column="0" Grid.Row="14" Grid.ColumnSpan="2">
+                <DataGrid x:Name="estDataGrid" Grid.Column="0" Grid.Row="14" Grid.ColumnSpan="2">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="번호"/>
                         <DataGridTextColumn Header="내역"/>

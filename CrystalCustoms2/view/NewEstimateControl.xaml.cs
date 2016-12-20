@@ -2,6 +2,7 @@
 using LiteDB;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,8 @@ namespace CrystalCustoms2.view
     public partial class NewEstimateControl : UserControl
     {
         private LayoutDocumentPane documentPane;
+        private List<EstimateItems> estItems = new List<EstimateItems>();
+
         public NewEstimateControl(LayoutDocumentPane documentPaneInstance)
         {
             documentPane = documentPaneInstance;
@@ -63,7 +66,7 @@ namespace CrystalCustoms2.view
                 DeliveryPoint = txtDeliveryPoint.Text,
                 PayCond = txtPayCond.Text,
                 TaxRate = txtTaxRate.Text,
-                Items = new List<EstimateItems>(),
+                Items = estItems,
                 Amount = txtAmount.Text
             };
 
@@ -74,6 +77,8 @@ namespace CrystalCustoms2.view
                 var col = db.GetCollection<Estimates>("Estimates");
                 var item = dataItem;
                 col.Insert(item);
+
+                Xceed.Wpf.Toolkit.MessageBox.Show("견적등록이 완료되었습니다.");
             }
         }
 
@@ -86,6 +91,12 @@ namespace CrystalCustoms2.view
         private void ClickedBtnRemoveItem(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        // 항목 추가
+        public void AddOptionItem(string[] row) {
+            estItems = new List<EstimateItems>();
+            estDataGrid.Items.Add(row);
         }
     }
 }

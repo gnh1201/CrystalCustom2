@@ -31,20 +31,14 @@
             <Button x:Name="btnSave" Content="견적서 신규생성" Width="140" Height="30" Click="ClickedBtnAdd"/>
             <Button x:Name="btnDelete" Content="삭제" Width="75" Height="30" Click="ClickedBtnDelete"/>
             <Button x:Name="btnEdit" Content="수정" Width="75" Height="30" Click="ClickedBtnEdit"/>
-            <Button x:Name="btnComplete" Content="판매완료" Width="100" Height="30" Click="ClickedBtnComplete"/>
+            <Button x:Name="btnExport" Content="PDF 내보내기" Width="120" Height="30" Click="ClickedBtnExport"/>
+            <Button x:Name="btnComplete" Content="판매완료" Width="80" Height="30" Click="ClickedBtnComplete"/>
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="8">
-            <DataGrid x:Name="keyDataGrid" IsReadOnly="True" SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Stretch">
+            <DataGrid x:Name="estDataGrid" IsReadOnly="True" SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Stretch">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="키번호" Binding="{Binding Path=ID}"/>
-                    <DataGridTextColumn Header="키형식" Binding="{Binding Path=TYPE}"/>
-                    <DataGridTextColumn Header="키이름" Binding="{Binding Path=NAME}"/>
-                    <DataGridTextColumn Header="키설명" Binding="{Binding Path=DESC}"/>
-                    <DataGridTextColumn Header="키코드" Binding="{Binding Path=CODE}"/>
-                    <DataGridTextColumn Header="키접근횟수" Binding="{Binding Path=CNT}"/>
-                    <DataGridTextColumn Header="키최근사용날짜" Binding="{Binding Path=LAST}"/>
-                    <DataGridTextColumn Header="키등록날짜" Binding="{Binding Path=DATE}"/>
+                    <!--<DataGridTextColumn Header="키번호" Binding="{Binding Path=ID}"/>-->
                 </DataGrid.Columns>
             </DataGrid>
         </StackPanel>

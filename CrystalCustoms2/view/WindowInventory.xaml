@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CrystalCustoms2.view"
         mc:Ignorable="d"
-        Title="재고확인" Height="300" Width="300">
+        Title="재고수량 확인" d:DesignHeight="500" d:DesignWidth="500">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height = "40" />
+            <RowDefinition Height = "*"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="재고수량 확인" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="0"/>
+
+        <DataGrid x:Name="invDataGrid" Grid.Column="0" Grid.Row="1">
+            <DataGrid.Resources>
+                <Style TargetType="DataGridRow">
+                    <EventSetter Event="MouseDoubleClick" Handler="Row_DoubleClick"/>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="번호" Binding="{Binding Path=Id}"/>
+                <DataGridTextColumn Header="제품명" Binding="{Binding Path=Name}"/>
+                <DataGridTextColumn Header="Master B/L" Binding="{Binding Path=Mblno}"/>
+                <DataGridTextColumn Header="House B/L" Binding="{Binding Path=Hblno}"/>
+                <DataGridTextColumn Header="수량" Binding="{Binding Path=Qty}"/>
+                <DataGridTextColumn Header="단가" Binding="{Binding Path=Unitprice}"/>
+                <DataGridTextColumn Header="규격" Binding="{Binding Path=Standard}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

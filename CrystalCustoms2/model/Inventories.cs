@@ -13,6 +13,7 @@ namespace CrystalCustoms2.model
         public string Mblno { get; set; }
         public string Hblno { get; set; }
         public string Qty { get; set; }
+        public int Unitprice { get; set; }
         public string Standard { get; set; }
     }
 }

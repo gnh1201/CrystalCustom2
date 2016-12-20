@@ -82,6 +82,7 @@ namespace CrystalCustoms2.view
                     Mblno = txtMblno.Text,
                     Hblno = txtHblno.Text,
                     Qty = txtProductQty.Text,
+                    Unitprice = Int32.Parse(txtProductUnitprice.Text),
                     Standard = txtProductStandard.Text
                 };
                 col.Insert(item);
