@@ -138,11 +138,10 @@
             <xcad:LayoutRoot x:Name="_layoutRoot">
                 <xcad:LayoutPanel Orientation="Horizontal">
                     <xcad:LayoutAnchorablePane DockWidth="200">
-                        <xcad:LayoutAnchorable ContentId="properties" Title="Properties" CanHide="False" CanClose="False"
+                        <xcad:LayoutAnchorable ContentId="properties" Title="좌측공간" CanHide="False" CanClose="False"
                                             AutoHideWidth="240"
                                          IconSource="images/property-blue.png">
-                            <xctk:PropertyGrid NameColumnWidth="110"
-                        SelectedObject="{Binding ElementName=_layoutRoot, Path=LastFocusedDocument.Content}"/>
+                            <!--<xctk:PropertyGrid NameColumnWidth="110" SelectedObject="{Binding ElementName=_layoutRoot, Path=LastFocusedDocument.Content}"/>-->
                         </xcad:LayoutAnchorable>
                     </xcad:LayoutAnchorablePane>
                     <xcad:LayoutDocumentPaneGroup>
