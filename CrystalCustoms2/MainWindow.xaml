@@ -100,33 +100,15 @@
             </Fluent:RibbonTabItem>
         </Fluent:Ribbon>
 
-        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" Grid.Row="1">
-            <TextBlock Text="Theme:" Margin="0,0,10,0" VerticalAlignment="Center"/>
-            <ComboBox x:Name="_themeCombo" SelectedIndex="0" Width="200">
-                <ComboBoxItem Content="Generic" />
-                <ComboBoxItem Content="Aero">
-                    <ComboBoxItem.Tag>
-                        <xcad:AeroTheme />
-                    </ComboBoxItem.Tag>
-                </ComboBoxItem>
-                <ComboBoxItem Content="VS2010">
-                    <ComboBoxItem.Tag>
-                        <xcad:VS2010Theme />
-                    </ComboBoxItem.Tag>
-                </ComboBoxItem>
-                <ComboBoxItem Content="Metro">
-                    <ComboBoxItem.Tag>
-                        <xcad:MetroTheme />
-                    </ComboBoxItem.Tag>
-                </ComboBoxItem>
-            </ComboBox>
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" Grid.Row="0" Visibility="Hidden">
+            <TextBox x:Name="_themeCombo" Tag="Metro" />
         </StackPanel>
 
         <xcad:DockingManager Grid.Row="2"
                            AllowMixedOrientation="True"
                            BorderBrush="Black"
                            BorderThickness="1"
-                           Theme="{Binding ElementName=_themeCombo, Path=SelectedItem.Tag}">
+                           Theme="{Binding ElementName=_themeCombo, Path=_themeCombo.Tag}">
             <xcad:DockingManager.DocumentHeaderTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -137,57 +119,14 @@
             </xcad:DockingManager.DocumentHeaderTemplate>
             <xcad:LayoutRoot x:Name="_layoutRoot">
                 <xcad:LayoutPanel Orientation="Horizontal">
-                    <xcad:LayoutAnchorablePane DockWidth="200">
-                        <xcad:LayoutAnchorable ContentId="properties" Title="좌측공간" CanHide="False" CanClose="False"
-                                            AutoHideWidth="240"
-                                         IconSource="images/property-blue.png">
-                            <!--<xctk:PropertyGrid NameColumnWidth="110" SelectedObject="{Binding ElementName=_layoutRoot, Path=LastFocusedDocument.Content}"/>-->
-                        </xcad:LayoutAnchorable>
-                    </xcad:LayoutAnchorablePane>
                     <xcad:LayoutDocumentPaneGroup>
                         <xcad:LayoutDocumentPane x:Name="documentPane">
                             <xcad:LayoutDocument ContentId="docWelcome" Title="환영합니다" IconSource="images/document.png" >
                                 <Label Content="환영합니다." FontSize="15" FontWeight="Bold"/>
                             </xcad:LayoutDocument>
                         </xcad:LayoutDocumentPane>
-                    </xcad:LayoutDocumentPaneGroup >
-                    <xcad:LayoutAnchorablePaneGroup DockWidth="125">
-                        <xcad:LayoutAnchorablePane>
-                            <xcad:LayoutAnchorable ContentId="alarms" Title="Alarms" IconSource="images/alarm-clock-blue.png">
-                                <ListBox>
-                                    <s:String>Alarm 1</s:String>
-                                    <s:String>Alarm 2</s:String>
-                                    <s:String>Alarm 3</s:String>
-                                </ListBox>
-                            </xcad:LayoutAnchorable>
-                            <xcad:LayoutAnchorable ContentId="journal" Title="Journal" >
-                                <RichTextBox>
-                                    <FlowDocument>
-                                        <Paragraph FontSize="14" FontFamily="Segoe">
-                                            This is the content of the Journal Pane.
-                                            <LineBreak/>
-                                            A
-                                            <Bold>RichTextBox</Bold> has been added here
-                                        </Paragraph>
-                                    </FlowDocument>
-                                </RichTextBox>
-                            </xcad:LayoutAnchorable>
-                        </xcad:LayoutAnchorablePane>
-                    </xcad:LayoutAnchorablePaneGroup>
+                    </xcad:LayoutDocumentPaneGroup>
                 </xcad:LayoutPanel>
-
-                <xcad:LayoutRoot.LeftSide>
-                    <xcad:LayoutAnchorSide>
-                        <xcad:LayoutAnchorGroup>
-                            <xcad:LayoutAnchorable Title="Agenda" ContentId="agenda" IconSource="images/alarm-clock-blue.png">
-                                <TextBlock Text="Agenda Content" Margin="10" FontSize="18" FontWeight="Black" TextWrapping="Wrap"/>
-                            </xcad:LayoutAnchorable>
-                            <xcad:LayoutAnchorable Title="Contacts" ContentId="contacts" IconSource="images/address-book--pencil.png" >
-                                <TextBlock Text="Contacts Content" Margin="10" FontSize="18" FontWeight="Black" TextWrapping="Wrap"/>
-                            </xcad:LayoutAnchorable>
-                        </xcad:LayoutAnchorGroup>
-                    </xcad:LayoutAnchorSide>
-                </xcad:LayoutRoot.LeftSide>
             </xcad:LayoutRoot>
         </xcad:DockingManager>
     </Grid>
