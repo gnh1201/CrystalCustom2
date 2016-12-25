@@ -37,6 +37,10 @@
                 </Fluent:RibbonGroupBox>
 
                 <Fluent:RibbonGroupBox Header="관리">
+                    <Fluent:Button Header="재고관리"
+                               Icon="Images\something.png"
+                               LargeIcon="Images\something.png"
+                               Click="ManageInventoryClicked"/>
                     <Fluent:Button Header="면장관리"
                                Icon="Images\something.png"
                                LargeIcon="Images\something.png"

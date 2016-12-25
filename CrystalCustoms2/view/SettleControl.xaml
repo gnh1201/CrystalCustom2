@@ -5,9 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CrystalCustoms2.view"
              mc:Ignorable="d" 
-             d:DesignHeight="1000" d:DesignWidth="1000">
+             d:DesignHeight="1200" d:DesignWidth="1000">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height = "40" />
             <RowDefinition Height = "40" />
             <RowDefinition Height = "*"/>
         </Grid.RowDefinitions>
@@ -18,7 +19,11 @@
 
         <Label Content="운송정보 입력" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="0"/>
 
-        <ScrollViewer Grid.Column="0" Grid.Row="1">
+        <StackPanel Grid.ColumnSpan="4" Grid.Row="1" Orientation="Horizontal">
+            <Button Content="운송등록 및 입고" Width="180" Height="30" Click="ClickedBtnOk"/>
+        </StackPanel>
+
+        <ScrollViewer Grid.Column="0" Grid.Row="2">
             <Grid x:Name="settleForm">
                 <Grid.RowDefinitions>
                     <RowDefinition Height = "40" />
@@ -36,7 +41,7 @@
                     <RowDefinition Height = "40" />
                     <RowDefinition Height = "40" />
                     <RowDefinition Height = "40" />
-                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "300" />
                     <RowDefinition Height = "40" />
                     <RowDefinition Height = "40" />
                     <RowDefinition Height = "40" />
@@ -121,6 +126,10 @@
                     <Label Content="통관수수료" VerticalAlignment="Center" Width="120"/>
                     <TextBox Name="txtSettleCommision" Text="100000" VerticalAlignment="Center" Width="200"/>
                 </StackPanel>
+                <StackPanel Grid.Column="1" Grid.Row="10" Orientation="Horizontal">
+                    <Label Content="기타비용" VerticalAlignment="Center" Width="120"/>
+                    <TextBox Name="txtOthersSum" Text="100000" VerticalAlignment="Center" Width="200"/>
+                </StackPanel>
 
                 <Label Content="입고정보" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="11" Grid.ColumnSpan="4" VerticalAlignment="Center"/>
                 <StackPanel Grid.Column="0" Grid.Row="12" Orientation="Horizontal">
@@ -140,10 +149,20 @@
                     <TextBox Name="txtProductStandard" Text="STD" VerticalAlignment="Center" Width="200"/>
                 </StackPanel>
 
-                <Label Content="운송등록 작업" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="14" Grid.ColumnSpan="4" VerticalAlignment="Center"/>
-                <StackPanel Grid.ColumnSpan="4" Grid.Row="15" Orientation="Horizontal">
-                    <Button Content="운송등록 및 입고" Width="180" Height="30" Click="ClickedBtnOk"/>
+                <Label Content="운송비용 상세내역" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="14" Grid.ColumnSpan="4" VerticalAlignment="Center"/>
+                <DataGrid x:Name="keyDataGrid" Grid.Column="0" Grid.Row="15" Grid.ColumnSpan="2" IsReadOnly="True" SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Stretch">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="항목" />
+                        <DataGridTextColumn Header="내역" />
+                        <DataGridTextColumn Header="금액" />
+                        <DataGridTextColumn Header="단위" />
+                    </DataGrid.Columns>
+                </DataGrid>
+                <StackPanel Grid.Column="0" Grid.Row="16" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Content="추가" Width="100" Height="30" Click="ClickedBtnAddItem" />
+                    <Button Content="삭제" Width="100" Height="30" Click="ClickedBtnRemoveItem" />
                 </StackPanel>
+
             </Grid>
         </ScrollViewer>
     </Grid>
