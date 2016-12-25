@@ -100,6 +100,8 @@
       <HintPath>..\packages\System.Data.SQLite.Linq.1.0.103\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\ControlzEx.2.1.4.13\lib\net45\System.Windows.Interactivity.dll</HintPath>
       <Private>True</Private>
@@ -170,6 +172,9 @@
     <Compile Include="view\ManageEstimate.xaml.cs">
       <DependentUpon>ManageEstimate.xaml</DependentUpon>
     </Compile>
+    <Compile Include="view\ManageInventory.xaml.cs">
+      <DependentUpon>ManageInventory.xaml</DependentUpon>
+    </Compile>
     <Compile Include="view\ManagePermit.xaml.cs">
       <DependentUpon>ManagePermit.xaml</DependentUpon>
     </Compile>
@@ -181,6 +186,9 @@
     </Compile>
     <Compile Include="view\NewEstimateControl.xaml.cs">
       <DependentUpon>NewEstimateControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\NewInventoryWindow.xaml.cs">
+      <DependentUpon>NewInventoryWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="view\PermitControl.xaml.cs">
       <DependentUpon>PermitControl.xaml</DependentUpon>
@@ -242,6 +250,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="view\ManageInventory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="view\ManagePermit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -255,6 +267,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="view\NewEstimateControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\NewInventoryWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

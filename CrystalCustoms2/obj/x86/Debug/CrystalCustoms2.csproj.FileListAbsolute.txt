@@ -74,3 +74,5 @@ C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCust
 C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\x86\Debug\CrystalCustoms2.csproj.GenerateResource.Cache
 C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\x86\Debug\CrystalCustoms2.exe
 C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\x86\Debug\CrystalCustoms2.pdb
+C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\x86\Debug\view\ManageInventory.g.cs
+C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\x86\Debug\view\ManageInventory.baml

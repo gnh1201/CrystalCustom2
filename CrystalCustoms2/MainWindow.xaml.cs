@@ -23,6 +23,7 @@ namespace CrystalCustoms2
         private ManageEstimate ManageEstimateInstance = null;
         private ManagePermit ManagePermitInstance = null;
         private ManageSettlement ManageSettlementInstance = null;
+        private ManageInventory ManageInventoryInstance = null;
 
         public MainWindow()
         {
@@ -135,6 +136,20 @@ namespace CrystalCustoms2
                 ContentId = "ManageSettlement",
                 Title = "운송관리",
                 Content = ManageSettlementInstance,
+                IconSource = new BitmapImage(new Uri("images/document.png", UriKind.Relative))
+            };
+            documentPane.Children.Add(ld);
+            documentPane.Children.Last().IsActive = true;
+        }
+
+        private void ManageInventoryClicked(object sender, RoutedEventArgs e)
+        {
+            ManageInventoryInstance = new ManageInventory(documentPane);
+            LayoutDocument ld = new LayoutDocument
+            {
+                ContentId = "ManageInventory",
+                Title = "재고관리",
+                Content = ManageInventoryInstance,
                 IconSource = new BitmapImage(new Uri("images/document.png", UriKind.Relative))
             };
             documentPane.Children.Add(ld);

@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="CrystalCustoms2.view.ManageInventory"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CrystalCustoms2.view"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="500">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height = "40" />
+                <RowDefinition Height = "40" />
+                <RowDefinition Height = "*"/>
+            </Grid.RowDefinitions>
+
+            <Label Content="재고관리" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="0"/>
+
+            <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal">
+                <Button x:Name="btnSave" Content="신규" Width="75" Height="30" Click="ClickedBtnNew"/>
+                <Button x:Name="btnDelete" Content="삭제" Width="75" Height="30" Click="ClickedBtnDelete"/>
+                <Button x:Name="btnEdit" Content="수정" Width="75" Height="30" Click="ClickedBtnEdit"/>
+                <Button x:Name="btnPrev" Content="이전" Width="75" Height="30" Click="ClickedBtnPrev"/>
+                <Button x:Name="btnNext" Content="다음" Width="75" Height="30" Click="ClickedBtnNext"/>
+            </StackPanel>
+
+            <DataGrid x:Name="invDataGrid" Grid.Column="0" Grid.Row="2">
+                <DataGrid.Resources>
+                    <Style TargetType="DataGridRow">
+                        <EventSetter Event="MouseDoubleClick" Handler="Row_DoubleClick"/>
+                    </Style>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="번호" Binding="{Binding Path=Id}"/>
+                    <DataGridTextColumn Header="제품명" Binding="{Binding Path=Name}"/>
+                    <DataGridTextColumn Header="Master B/L" Binding="{Binding Path=Mblno}"/>
+                    <DataGridTextColumn Header="House B/L" Binding="{Binding Path=Hblno}"/>
+                    <DataGridTextColumn Header="수량" Binding="{Binding Path=Qty}"/>
+                    <DataGridTextColumn Header="단가" Binding="{Binding Path=Unitprice}"/>
+                    <DataGridTextColumn Header="규격" Binding="{Binding Path=Standard}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</UserControl>

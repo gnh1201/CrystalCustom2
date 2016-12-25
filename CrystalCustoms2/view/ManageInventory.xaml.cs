@@ -1,5 +1,8 @@
-﻿using System;
+﻿using CrystalCustoms2.model;
+using LiteDB;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,38 +13,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-using LiteDB;
-using CrystalCustoms2.model;
-using System.Data;
+using Xceed.Wpf.AvalonDock.Layout;
 
 namespace CrystalCustoms2.view
 {
     /// <summary>
-    /// WindowInventory.xaml에 대한 상호 작용 논리
+    /// ManageInventory.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class WindowInventory : Window
+    public partial class ManageInventory : UserControl
     {
-        private NewEstimateControl NewEstimateControlInstance = null;
-        private SettleControl SettleControlInstance = null;
-        private string formType = "";
-
-        public WindowInventory(object parentForm, string formType="estimate")
+        public ManageInventory(LayoutDocumentPane documentPaneInstance)
         {
-            this.formType = formType;
-            switch (formType)
-            {
-                case "estimate":
-                    NewEstimateControlInstance = (NewEstimateControl)parentForm;
-                    break;
-                case "settle":
-                    SettleControlInstance = (SettleControl)parentForm;
-                    break;
-            }
-
             InitializeComponent();
-            InitializeControls(); // 컨트롤 초기화
+            InitializeControls();
         }
 
         private void InitializeControls()
@@ -82,30 +69,44 @@ namespace CrystalCustoms2.view
             }
         }
 
-        // 상품 선택시
-        private void Row_DoubleClick(object sender, RoutedEventArgs e)
+        // 외부 접근
+        public void RefreshControls()
         {
-            // 상품추가
-            DataRowView row = (DataRowView)invDataGrid.SelectedItems[0];
-            int itemAmount = 0;
-            object[] passObj = new object[] {
-                row[0].ToString(), row[1].ToString(), row[5].ToString(), row[4].ToString(), itemAmount.ToString()
-            };
+            InitializeControls();
+        }
 
-            MessageBox.Show(String.Join(" ", passObj));
+        // 더블클릭 시
+        private void Row_DoubleClick(object sender, EventArgs e)
+        {
 
-            switch (formType)
-            {
-                case "estimate":
-                    NewEstimateControlInstance.AddOptionItem(passObj);
-                    break;
-                case "settle":
-                    SettleControlInstance.AddInvOptionItem(passObj);
-                    break;
-            }
+        }
 
-            // 추가 후 닫기
-            this.Close();
+
+        // 신규
+        private void ClickedBtnNew(object sender, EventArgs e)
+        {
+            NewInventoryWindow invWIndow = new NewInventoryWindow("new", this);
+            invWIndow.Show();
+        }
+
+        // 정보 수정
+        private void ClickedBtnEdit(object sender, EventArgs e)
+        {
+        }
+
+        // 정보 삭제
+        private void ClickedBtnDelete(object sender, EventArgs e)
+        {
+        }
+
+        // 이전 조회
+        private void ClickedBtnPrev(object sender, EventArgs e)
+        {
+        }
+
+        // 다음 조회
+        private void ClickedBtnNext(object sender, EventArgs e)
+        {
         }
     }
 }

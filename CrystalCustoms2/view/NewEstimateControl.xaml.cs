@@ -26,11 +26,21 @@ namespace CrystalCustoms2.view
     {
         private LayoutDocumentPane documentPane;
         private List<EstimateItems> estItems = new List<EstimateItems>();
+        private DataTable dtOptions = new DataTable();
 
         public NewEstimateControl(LayoutDocumentPane documentPaneInstance)
         {
             documentPane = documentPaneInstance;
             InitializeComponent();
+
+            // 견적항목 초기화
+            string[] dataColumnBindNames = {
+                "ID", "ITEMNAME", "QTY", "UPRICE", "AMOUNT"
+            };
+            foreach (string item in dataColumnBindNames)
+            {
+                dtOptions.Columns.Add(item, typeof(string));
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -94,9 +104,11 @@ namespace CrystalCustoms2.view
         }
 
         // 항목 추가
-        public void AddOptionItem(string[] row) {
-            estItems = new List<EstimateItems>();
-            estDataGrid.Items.Add(row);
+        public void AddOptionItem(object[] row) {
+            dtOptions.Rows.Add(row);
+
+            estDataGrid.ItemsSource = dtOptions.DefaultView;
+            estDataGrid.Items.Refresh();
         }
     }
 }

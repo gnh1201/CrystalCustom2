@@ -21,7 +21,7 @@
         <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal">
             <Button Content="견적등록" Width="100" Height="30" Click="ClickedBtnSave"/>
         </StackPanel>
-        
+
         <ScrollViewer Grid.Column="0" Grid.Row="2">
             <Grid x:Name="settleForm">
                 <Grid.RowDefinitions>
@@ -39,9 +39,9 @@
                     <RowDefinition Height = "40" />
                     <RowDefinition Height = "40" />
                     <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
+                    <RowDefinition Height = "40" />
                     <RowDefinition Height = "200" />
-                    <RowDefinition Height = "40" />
-                    <RowDefinition Height = "40" />
                     <RowDefinition Height = "40" />
                     <RowDefinition Height = "*" />
                 </Grid.RowDefinitions>
@@ -128,29 +128,29 @@
                     <TextBox Name="txtPayCond" Text="귀원결제조건" VerticalAlignment="Center" Width="200"/>
                 </StackPanel>
 
-                <Label Content="견적품목" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="13" Grid.ColumnSpan="2" VerticalAlignment="Center"/>
-                <DataGrid x:Name="estDataGrid" Grid.Column="0" Grid.Row="14" Grid.ColumnSpan="2">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="번호"/>
-                        <DataGridTextColumn Header="내역"/>
-                        <DataGridTextColumn Header="수량"/>
-                        <DataGridTextColumn Header="단가"/>
-                        <DataGridTextColumn Header="금액"/>
-                    </DataGrid.Columns>
-                </DataGrid>
-                <StackPanel Grid.Column="0" Grid.Row="15" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Button Content="추가" Width="100" Height="30" Click="ClickedBtnAddItem" />
-                    <Button Content="삭제" Width="100" Height="30" Click="ClickedBtnRemoveItem" />
-                </StackPanel>
-
-                <Label Content="금액정보" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="16" Grid.ColumnSpan="2" VerticalAlignment="Center"/>
-                <StackPanel Grid.Column="0" Grid.Row="17" Orientation="Horizontal">
+                <Label Content="금액정보" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="13" Grid.ColumnSpan="2" VerticalAlignment="Center"/>
+                <StackPanel Grid.Column="0" Grid.Row="14" Orientation="Horizontal">
                     <Label Content="세율" VerticalAlignment="Center" Width="120"/>
                     <TextBox Name="txtTaxRate" Text="세율" VerticalAlignment="Center" Width="200"/>
                 </StackPanel>
-                <StackPanel Grid.Column="1" Grid.Row="17" Orientation="Horizontal">
+                <StackPanel Grid.Column="1" Grid.Row="14" Orientation="Horizontal">
                     <Label Content="합계" VerticalAlignment="Center" Width="120"/>
                     <TextBox Name="txtAmount" Text="합계" VerticalAlignment="Center" Width="200"/>
+                </StackPanel>
+
+                <Label Content="견적품목" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="16" Grid.ColumnSpan="2" VerticalAlignment="Center" Margin="10,10,-10,160"/>
+                <DataGrid x:Name="estDataGrid" Grid.Column="0" Grid.Row="16" Grid.ColumnSpan="2">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="번호" Binding="{Binding Path=ID}"/>
+                        <DataGridTextColumn Header="내역" Binding="{Binding Path=ITEMNAME}"/>
+                        <DataGridTextColumn Header="수량" Binding="{Binding Path=QTY}"/>
+                        <DataGridTextColumn Header="단가" Binding="{Binding Path=UPRICE}"/>
+                        <DataGridTextColumn Header="금액" Binding="{Binding Path=AMOUNT}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <StackPanel Grid.Column="0" Grid.Row="17" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Content="추가" Width="100" Height="30" Click="ClickedBtnAddItem" />
+                    <Button Content="삭제" Width="100" Height="30" Click="ClickedBtnRemoveItem" />
                 </StackPanel>
             </Grid>
 
