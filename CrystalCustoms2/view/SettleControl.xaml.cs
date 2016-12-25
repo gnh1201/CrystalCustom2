@@ -108,7 +108,8 @@ namespace CrystalCustoms2.view
         // 운송항목 추가
         private void ClickedBtnAddItem(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("추가");
+            SettleDetailWindow newForm = new SettleDetailWindow();
+            newForm.Show();
         }
 
         // 운송항목 제거

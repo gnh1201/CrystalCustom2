@@ -78,3 +78,5 @@ C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCust
 C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\Debug\view\ManageInventory.baml
 C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\Debug\view\NewInventoryWindow.g.cs
 C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\Debug\view\NewInventoryWindow.baml
+C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\Debug\view\SettleDetailWindow.g.cs
+C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\obj\Debug\view\SettleDetailWindow.baml

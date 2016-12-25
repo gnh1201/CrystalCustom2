@@ -199,6 +199,9 @@
     <Compile Include="view\SettleControl.xaml.cs">
       <DependentUpon>SettleControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="view\SettleDetailWindow.xaml.cs">
+      <DependentUpon>SettleDetailWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="view\WindowInventory.xaml.cs">
       <DependentUpon>WindowInventory.xaml</DependentUpon>
     </Compile>
@@ -283,6 +286,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="view\SettleControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\SettleDetailWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
