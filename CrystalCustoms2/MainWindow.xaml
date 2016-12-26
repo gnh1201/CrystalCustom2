@@ -126,7 +126,10 @@
                     <xcad:LayoutDocumentPaneGroup>
                         <xcad:LayoutDocumentPane x:Name="documentPane">
                             <xcad:LayoutDocument ContentId="docWelcome" Title="환영합니다" IconSource="images/document.png" >
-                                <Label Content="환영합니다." FontSize="15" FontWeight="Bold"/>
+                                <StackPanel>
+                                    <Label Content="환영합니다." FontSize="15" FontWeight="Bold"/>
+                                    <Image x:Name="IntroImage"/>
+                                </StackPanel>
                             </xcad:LayoutDocument>
                         </xcad:LayoutDocumentPane>
                     </xcad:LayoutDocumentPaneGroup>

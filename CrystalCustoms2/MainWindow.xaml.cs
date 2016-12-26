@@ -28,6 +28,15 @@ namespace CrystalCustoms2
         public MainWindow()
         {
             InitializeComponent();
+
+            // 이미지 초기화
+            BitmapImage bmImage = new BitmapImage();
+            bmImage.BeginInit();
+            bmImage.UriSource = new Uri("images/intro.jpg", UriKind.Relative);
+            bmImage.EndInit();
+            IntroImage.Width = 550;
+            IntroImage.Height = 367;
+            IntroImage.Source = bmImage;
         }
 
         private void PermitClicked(object sender, RoutedEventArgs e)
