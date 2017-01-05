@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\choim\documents\visual studio 2015\Projects\CrystalCustoms2\CrystalCustoms2\App.xaml
-15583034257
+17-97495603
 
-59-2041303654
+61-232847084
 33-57909735
-MainWindow.xaml;view\AppSetting.xaml;view\AreinControl.xaml;view\ManageAddressBook.xaml;view\ManageApikeys.xaml;view\ManageEstimate.xaml;view\ManageInventory.xaml;view\ManagePermit.xaml;view\ManageSettlement.xaml;view\ManageStocks.xaml;view\NewEstimateControl.xaml;view\PermitControl.xaml;view\PermitViewer.xaml;view\SettleControl.xaml;view\WindowInventory.xaml;
+MainWindow.xaml;view\AppSetting.xaml;view\AreinControl.xaml;view\ManageAddressBook.xaml;view\ManageApikeys.xaml;view\ManageEstimate.xaml;view\ManageInventory.xaml;view\ManagePermit.xaml;view\ManageSettlement.xaml;view\ManageStocks.xaml;view\NewEstimateControl.xaml;view\NewInventoryWindow.xaml;view\PermitControl.xaml;view\PermitViewer.xaml;view\SettleControl.xaml;view\SettleDetailWindow.xaml;view\WindowInventory.xaml;
 
 False
 
